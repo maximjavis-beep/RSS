@@ -129,7 +129,7 @@
         <header>
             <h1>📚 全球学术与媒体日报</h1>
             <p>自动生成的每日综合报告</p>
-            <div class="update-time">更新时间: 2026年03月07日02:55</div>
+            <div class="update-time">更新时间: 2026年03月07日03:05</div>
         </header>
         
         <div class="card">
@@ -1053,7 +1053,7 @@ Abstract: Embodied navigation in underground mines faces significant challenges,
 
 <hr>
 
-<em>报告生成时间: 2026-03-07 02:55</em>  
+<em>报告生成时间: 2026-03-07 03:05</em>  
 <em>共收录 51 个 RSS 源</em>
 
         </div>
@@ -1062,5 +1062,40 @@ Abstract: Embodied navigation in underground mines faces significant challenges,
             <p>PureCut</p>
         </footer>
     </div>
+    
+    <!-- 微信分享优化脚本 -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script>
+        // 微信内置浏览器检测
+        var isWeixin = /MicroMessenger/i.test(navigator.userAgent);
+        
+        if (isWeixin) {
+            // 微信环境下强制刷新分享数据
+            document.addEventListener('WeixinJSBridgeReady', function() {
+                WeixinJSBridge.call('hideOptionMenu');
+                WeixinJSBridge.call('showOptionMenu');
+            });
+        }
+        
+        // 通用分享数据更新
+        var shareData = {
+            title: '📚 全球学术与媒体日报',
+            desc: '每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告',
+            link: 'https://rss-seven-kappa-47.vercel.app/',
+            imgUrl: 'https://rss-seven-kappa-47.vercel.app/cover.jpg',
+            success: function() {},
+            cancel: function() {}
+        };
+        
+        // 监听分享事件
+        if (typeof wx !== 'undefined') {
+            wx.ready(function() {
+                wx.onMenuShareTimeline(shareData);
+                wx.onMenuShareAppMessage(shareData);
+                wx.onMenuShareQQ(shareData);
+                wx.onMenuShareWeibo(shareData);
+            });
+        }
+    </script>
 </body>
 </html>
