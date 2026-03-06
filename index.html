@@ -3,37 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSS 日报 - 全球学术与媒体</title>
+    <title>全球学术与媒体日报 - 2026年03月06日</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
+            line-height: 1.6;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1200px; margin: 0 auto; }
         header {
             text-align: center;
             padding: 40px 20px;
             color: white;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-        header p {
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        header p { font-size: 1.1em; opacity: 0.9; }
         .update-time {
             background: rgba(255,255,255,0.2);
             display: inline-block;
@@ -48,10 +35,6 @@
             padding: 30px;
             margin-bottom: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
         }
         .card h2 {
             color: #333;
@@ -61,13 +44,19 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 1.5em;
         }
-        .paper-list {
-            list-style: none;
+        .card h3 {
+            color: #555;
+            margin: 25px 0 15px 0;
+            padding-left: 10px;
+            border-left: 3px solid #764ba2;
+            font-size: 1.2em;
         }
+        .paper-list { list-style: none; }
         .paper-item {
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
             background: #f8f9fa;
             border-radius: 12px;
             border-left: 4px solid #667eea;
@@ -81,31 +70,49 @@
             font-weight: 600;
             color: #667eea;
             text-decoration: none;
-            font-size: 1.1em;
+            font-size: 1em;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
-        .paper-title:hover {
-            color: #764ba2;
-        }
+        .paper-title:hover { color: #764ba2; }
         .paper-abstract {
             color: #666;
-            font-size: 0.95em;
-            line-height: 1.6;
+            font-size: 0.9em;
+            line-height: 1.5;
         }
         .paper-meta {
             color: #999;
-            font-size: 0.85em;
-            margin-top: 8px;
+            font-size: 0.8em;
+            margin-top: 6px;
         }
         .category-badge {
             display: inline-block;
-            padding: 4px 12px;
+            padding: 3px 10px;
             background: #667eea;
             color: white;
             border-radius: 12px;
-            font-size: 0.75em;
+            font-size: 0.7em;
+            margin-bottom: 8px;
+            margin-right: 5px;
+        }
+        .news-item {
+            padding: 12px 20px;
             margin-bottom: 10px;
+            background: #f0f7ff;
+            border-radius: 10px;
+            border-left: 3px solid #4a90e2;
+        }
+        .news-title {
+            font-weight: 500;
+            color: #2c5aa0;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .news-title:hover { text-decoration: underline; }
+        .news-source {
+            color: #888;
+            font-size: 0.8em;
+            margin-top: 4px;
         }
         footer {
             text-align: center;
@@ -113,128 +120,382 @@
             color: white;
             opacity: 0.8;
         }
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .pdf-download {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            font-weight: 600;
+            z-index: 1000;
+        }
+        .pdf-download:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            .card {
-                padding: 20px;
-            }
+            header h1 { font-size: 1.8em; }
+            .card { padding: 20px; }
+            .section-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>📚 RSS 日报</h1>
+            <h1>📚 全球学术与媒体日报</h1>
             <p>全球学术与媒体精选</p>
             <div class="update-time">🕐 更新时间：2026年03月06日 11:33 北京时间</div>
         </header>
 
         <div class="card">
             <h2>🤖 AI 论文 (arXiv)</h2>
+            <h3>arXiv AI</h3>
             <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">arXiv AI</span>
                     <a href="https://arxiv.org/abs/2603.03456" class="paper-title" target="_blank">Asymmetric Goal Drift in Coding Agents Under Value Conflict</a>
-                    <p class="paper-abstract">Agentic coding agents are increasingly deployed autonomously, at scale, and over long-context horizons...</p>
-                    <div class="paper-meta">arXiv:2603.03456v1</div>
-                </li>
-                <li class="paper-item">
-                    <span class="category-badge">arXiv AI</span>
-                    <a href="https://arxiv.org/abs/2603.03565" class="paper-title" target="_blank">Build, Judge, Optimize: A Blueprint for Continuous Improvement of Multi-Agent Consumer Assistants</a>
-                    <p class="paper-abstract">Conversational shopping assistants (CSAs) represent a compelling application of agentic AI...</p>
-                    <div class="paper-meta">arXiv:2603.03565v1</div>
-                </li>
-                <li class="paper-item">
-                    <span class="category-badge">arXiv AI</span>
-                    <a href="https://arxiv.org/abs/2603.03655" class="paper-title" target="_blank">Mozi: Governed Autonomy for Drug Discovery LLM Agents</a>
-                    <p class="paper-abstract">Tool-augmented large language model (LLM) agents promise to unify scientific reasoning with computation...</p>
-                    <div class="paper-meta">arXiv:2603.03655v1</div>
-                </li>
-                <li class="paper-item">
-                    <span class="category-badge">arXiv AI</span>
-                    <a href="https://arxiv.org/abs/2603.03680" class="paper-title" target="_blank">MAGE: Meta-Reinforcement Learning for Language Agents toward Strategic Exploration and Exploitation</a>
-                    <p class="paper-abstract">Large Language Model (LLM) agents have demonstrated remarkable proficiency in learned tasks...</p>
-                    <div class="paper-meta">arXiv:2603.03680v1</div>
-                </li>
-                <li class="paper-item">
-                    <span class="category-badge">arXiv AI</span>
-                    <a href="https://arxiv.org/abs/2603.03686" class="paper-title" target="_blank">AI4S-SDS: A Neuro-Symbolic Solvent Design System via Sparse MCTS and Differentiable Physics Alignment</a>
-                    <p class="paper-abstract">Automated design of chemical formulations is a cornerstone of materials science...</p>
-                    <div class="paper-meta">arXiv:2603.03686v1</div>
+                    <p class="paper-abstract">arXiv:2603.03456v1 Announce Type: new 
+Abstract: Agentic coding agents are increasingly deployed autonomously, at scale, and over long-context horizons. Throughout an agent&#x27;s lifetime, it must navigat...</p>
                 </li>
             </ul>
-        </div>
-
-        <div class="card">
-            <h2>🧠 机器学习 (arXiv ML)</h2>
+            <h3>arXiv Machine Learning</h3>
             <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">ML</span>
                     <a href="https://arxiv.org/abs/2603.03304" class="paper-title" target="_blank">Knowledge Graph and Hypergraph Transformers with Repository-Attention and Journey-Based Role Transport</a>
-                    <p class="paper-abstract">We present a concise architecture for joint training on sentences and structured data...</p>
-                    <div class="paper-meta">arXiv:2603.03304v1</div>
-                </li>
-                <li class="paper-item">
-                    <span class="category-badge">ML</span>
-                    <a href="https://arxiv.org/abs/2603.03378" class="paper-title" target="_blank">AOI: Turning Failed Trajectories into Training Signals for Autonomous Cloud Diagnosis</a>
-                    <p class="paper-abstract">Large language model (LLM) agents offer a promising data-driven approach to automating Site Reliability Engineering...</p>
-                    <div class="paper-meta">arXiv:2603.03378v2</div>
-                </li>
-                <li class="paper-item">
-                    <span class="category-badge">ML</span>
-                    <a href="https://arxiv.org/abs/2603.03388" class="paper-title" target="_blank">RADAR: Learning to Route with Asymmetry-aware DistAnce Representations</a>
-                    <p class="paper-abstract">Recent neural solvers have achieved strong performance on vehicle routing problems (VRPs)...</p>
-                    <div class="paper-meta">arXiv:2603.03388v2</div>
+                    <p class="paper-abstract">arXiv:2603.03304v1 Announce Type: new 
+Abstract: We present a concise architecture for joint training on sentences and structured data while keeping knowledge and language representations separable. T...</p>
                 </li>
             </ul>
-        </div>
-
-        <div class="card">
-            <h2>👁️ 计算机视觉 (arXiv CV)</h2>
+            <h3>arXiv Computer Vision</h3>
             <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">CV</span>
                     <a href="https://arxiv.org/abs/2603.03418" class="paper-title" target="_blank">mHC-HSI: Clustering-Guided Hyper-Connection Mamba for Hyperspectral Image Classification</a>
-                    <p class="paper-abstract">Recently, DeepSeek has invented the manifold-constrained hyper-connection (mHC) approach...</p>
-                    <div class="paper-meta">arXiv:2603.03418v1</div>
+                    <p class="paper-abstract">arXiv:2603.03418v1 Announce Type: new 
+Abstract: Recently, DeepSeek has invented the manifold-constrained hyper-connection (mHC) approach which has demonstrated significant improvements over the tradi...</p>
                 </li>
+            </ul>
+            <h3>arXiv NLP</h3>
+            <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">CV</span>
-                    <a href="https://arxiv.org/abs/2603.03437" class="paper-title" target="_blank">Beyond Accuracy: Evaluating Visual Grounding In Multimodal Medical Reasoning</a>
-                    <p class="paper-abstract">Recent work shows that text-only reinforcement learning with verifiable rewards (RLVR) can match or outperform...</p>
-                    <div class="paper-meta">arXiv:2603.03437v1</div>
+                    <a href="https://arxiv.org/abs/2603.03290" class="paper-title" target="_blank">AriadneMem: Threading the Maze of Lifelong Memory for LLM Agents</a>
+                    <p class="paper-abstract">arXiv:2603.03290v1 Announce Type: new 
+Abstract: Long-horizon LLM agents require memory systems that remain accurate under fixed context budgets. However, existing systems struggle with two persistent...</p>
                 </li>
+            </ul>
+            <h3>arXiv Robotics</h3>
+            <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">CV</span>
-                    <a href="https://arxiv.org/abs/2603.03447" class="paper-title" target="_blank">Proact-VL: A Proactive VideoLLM for Real-Time AI Companions</a>
-                    <p class="paper-abstract">Proactive and real-time interactive experiences are essential for human-like AI companions...</p>
-                    <div class="paper-meta">arXiv:2603.03447v1</div>
+                    <a href="https://arxiv.org/abs/2603.03380" class="paper-title" target="_blank">LiteVLA-Edge: Quantized On-Device Multimodal Control for Embedded Robotics</a>
+                    <p class="paper-abstract">arXiv:2603.03380v1 Announce Type: new 
+Abstract: Vision-Language-Action (VLA) models provide a unified framework for perception, language conditioning, and action generation, but many existing systems...</p>
+                </li>
+            </ul>
+            <h3>arXiv Multi-Agent Systems</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03526" class="paper-title" target="_blank">Multi-Agent Influence Diagrams to Hybrid Threat Modeling</a>
+                    <p class="paper-abstract">arXiv:2603.03526v1 Announce Type: new 
+Abstract: Western governments have adopted an assortment of counter-hybrid threat measures to defend against hostile actions below the conventional military thre...</p>
+                </li>
+            </ul>
+            <h3>arXiv Neural Networks</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03476" class="paper-title" target="_blank">Stringology-Based Motif Discovery from EEG Signals: an ADHD Case Study</a>
+                    <p class="paper-abstract">arXiv:2603.03476v1 Announce Type: cross 
+Abstract: We propose a novel computational framework for analyzing electroencephalography (EEG) time series using methods from stringology, the study of effici...</p>
+                </li>
+            </ul>
+            <h3>arXiv Information Retrieval</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03379" class="paper-title" target="_blank">MemSifter: Offloading LLM Memory Retrieval via Outcome-Driven Proxy Reasoning</a>
+                    <p class="paper-abstract">arXiv:2603.03379v1 Announce Type: new 
+Abstract: As Large Language Models (LLMs) are increasingly used for long-duration tasks, maintaining effective long-term memory has become a critical challenge. ...</p>
                 </li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>💬 自然语言处理 (arXiv NLP)</h2>
+            <h2>🧮 理论数学类</h2>
+            <h3>arXiv Data Structures &amp; Algorithms</h3>
             <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">NLP</span>
-                    <a href="https://arxiv.org/abs/2603.03290" class="paper-title" target="_blank">AriadneMem: Threading the Maze of Lifelong Memory for LLM Agents</a>
-                    <p class="paper-abstract">Long-horizon LLM agents require memory systems that remain accurate under fixed context budgets...</p>
-                    <div class="paper-meta">arXiv:2603.03290v1</div>
+                    <a href="https://arxiv.org/abs/2603.03909" class="paper-title" target="_blank">Ultrabubble enumeration via a lowest common ancestor approach</a>
+                    <p class="paper-abstract">2. [Stringology-Based Motif Discovery from EEG Signals: an ADHD Case Study](https://arxiv.org/abs/2603.03476)
+
+3. [Dynamic Kernel Graph Sparsifiers](https://arxiv.org/abs/2211.14825)</p>
                 </li>
+            </ul>
+            <h3>arXiv Computational Complexity</h3>
+            <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">NLP</span>
-                    <a href="https://arxiv.org/abs/2603.03291" class="paper-title" target="_blank">One Bias After Another: Mechanistic Reward Shaping and Persistent Biases in Language Reward Models</a>
-                    <p class="paper-abstract">Reward Models (RMs) are crucial for online alignment of language models (LMs) with human preferences...</p>
-                    <div class="paper-meta">arXiv:2603.03291v1</div>
+                    <a href="https://arxiv.org/abs/2603.03488" class="paper-title" target="_blank">Planar Graph Orientation Frameworks, Applied to KPlumber and Polyomino Tiling</a>
+                    <p class="paper-abstract">2. [Learning Read-Once Determinants and the Principal Minor Assignment Problem](https://arxiv.org/abs/2603.04255)
+
+3. [Why Are Linear RNNs More Parallelizable?](https://arxiv.org/abs/2603.03612)</p>
                 </li>
+            </ul>
+            <h3>arXiv Discrete Mathematics</h3>
+            <ul class="paper-list">
                 <li class="paper-item">
-                    <span class="category-badge">NLP</span>
-                    <a href="https://arxiv.org/abs/2603.03292" class="paper-title" target="_blank">From Conflict to Consensus: Boosting Medical Reasoning via Multi-Round Agentic RAG</a>
-                    <p class="paper-abstract">Large Language Models (LLMs) exhibit high reasoning capacity in medical question-answering...</p>
-                    <div class="paper-meta">arXiv:2603.03292v1</div>
+                    <a href="https://arxiv.org/abs/2603.04011" class="paper-title" target="_blank">Learning Foundations Beneath the Stars</a>
+                    <p class="paper-abstract">2. [Submodular Maximization over a Matroid $k$-Intersection: Multiplicative Improvement over Greedy](https://arxiv.org/abs/2602.08473)</p>
+                </li>
+            </ul>
+            <h3>arXiv Game Theory</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03560" class="paper-title" target="_blank">Pricing for Information Revelation in Demand Response: A Strategic Communication Approach</a>
+                    <p class="paper-abstract">2. [STARDIS: Strategic Scheduling and Deceptive Signaling for Satellite Intrusion Detection System Deployment](https://arxiv.org/abs/2603.03678)
+
+3. [Representation theorems for actual and alpha power...</p>
+                </li>
+            </ul>
+            <h3>arXiv Logic in CS</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03668" class="paper-title" target="_blank">Can LLM Aid in Solving Constraints with Inductive Definitions?</a>
+                    <p class="paper-abstract">2. [Sensible Intersection Type Theories](https://arxiv.org/abs/2603.04004)
+
+3. [Uniform Realizability Interpretations](https://arxiv.org/abs/2603.04009)
+
+
+---</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🌐 应用/交叉类</h2>
+            <h3>arXiv Human-Computer Interaction</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03416" class="paper-title" target="_blank">Designing with Medical Mistrust: Perspectives from Black Older Adults in Publicly Subsidized Housing</a>
+                    <p class="paper-abstract">2. [Human-centered Perspectives on a Clinical Decision Support System for Intensive Outpatient Veteran PTSD Care](https://arxiv.org/abs/2603.03467)
+
+3. [Inline Visualization and Manipulation of Real-T...</p>
+                </li>
+            </ul>
+            <h3>arXiv Social &amp; Information Networks</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03945" class="paper-title" target="_blank">How Predicted Links Influence Network Evolution: Disentangling Choice and Algorithmic Feedback in Dynamic Graphs</a>
+                    <p class="paper-abstract">2. [Molt Dynamics: Emergent Social Phenomena in Autonomous AI Agent Populations](https://arxiv.org/abs/2603.03555)
+
+3. [UrbanHuRo: A Two-Layer Human-Robot Collaboration Framework for the Joint Optimiz...</p>
+                </li>
+            </ul>
+            <h3>arXiv Computers &amp; Society</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03338" class="paper-title" target="_blank">AI Researchers&#x27; Views on Automating AI R&amp;D and Intelligence Explosions</a>
+                    <p class="paper-abstract">2. [Arapai: An Offline-First AI Chatbot Architecture for Low-Connectivity Educational Environments](https://arxiv.org/abs/2603.03339)
+
+3. [Trustworthy AI Posture (TAIP): A Framework for Continuous AI ...</p>
+                </li>
+            </ul>
+            <h3>arXiv Graphics</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03287" class="paper-title" target="_blank">Deep Sketch-Based 3D Modeling: A Survey</a>
+                    <p class="paper-abstract">2. [Map-Agnostic And Interactive Safety-Critical Scenario Generation via Multi-Objective Tree Search](https://arxiv.org/abs/2603.03978)
+
+3. [EgoPoseFormer v2: Accurate Egocentric Human Motion Estimati...</p>
+                </li>
+            </ul>
+            <h3>arXiv Systems &amp; Control</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03479" class="paper-title" target="_blank">Multidisciplinary Design Optimization of a Low-Thrust Asteroid Orbit Insertion Using Electric Propulsion</a>
+                    <p class="paper-abstract">2. [Designing Barrier Functions for Graceful Safety Control](https://arxiv.org/abs/2603.03497)
+
+3. [Safety-Centered Scenario Generation for Autonomous Vehicles](https://arxiv.org/abs/2603.03574)</p>
+                </li>
+            </ul>
+            <h3>arXiv Multimedia</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03827" class="paper-title" target="_blank">Evolutionary Multimodal Reasoning via Hierarchical Semantic Representation for Intent Recognition</a>
+                    <p class="paper-abstract">2. [Order Is Not Layout: Order-to-Space Bias in Image Generation](https://arxiv.org/abs/2603.03714)
+
+3. [Robust LLM-based Audio-Visual Speech Recognition with Sparse Modality Alignment and Visual Unit...</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🧬 学术期刊</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.nature.com/articles/s41586-026-10305-0" class="paper-title" target="_blank">Author Correction: Programmable 200 GOPS Hopfield-inspired photonic Ising machine</a>
+                    <p class="paper-abstract">2. [The first ‘AI societies’ are taking shape: how human-like are they?](https://www.nature.com/articles/d41586-026-00070-5)
+
+3. [These brain cells clear proteins that contribute to Alzheimer’s](https...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.science.org/content/article/can-wealthy-family-change-course-deadly-brain-disease" class="paper-title" target="_blank">Can a wealthy family change the course of a deadly brain disease?</a>
+                    <p class="paper-abstract">2. [New HIV cure approach forces hidden virus into tripping immune sensor](https://www.science.org/content/article/new-hiv-cure-approach-forces-hidden-virus-tripping-immune-sensor)
+
+3. [NIH reneges on...</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🤖 机器人领域</h2>
+            <h3>arXiv Robotics</h3>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://arxiv.org/abs/2603.03380" class="paper-title" target="_blank">LiteVLA-Edge: Quantized On-Device Multimodal Control for Embedded Robotics</a>
+                    <p class="paper-abstract">2. [Multi-Agent-Based Simulation of Archaeological Mobility in Uneven Landscapes](https://arxiv.org/abs/2603.03390)
+
+3. [Impact of Localization Errors on Label Quality for Online HD Map Construction](...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://robohub.org/developing-an-optical-tactile-sensor-for-tracking-head-motion-during-radiotherapy-an-interview-with-bhoomika-gandhi/" class="paper-title" target="_blank">Developing an optical tactile sensor for tracking head motion during radiotherapy: an interview with Bhoomika Gandhi</a>
+                    <p class="paper-abstract">2. [Humanoid home robots are on the market – but do we really want them?](https://robohub.org/humanoid-home-robots-are-on-the-market-but-do-we-really-want-them/)
+
+3. [Robot Talk Episode 146 – Embodied...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/" class="paper-title" target="_blank">Vicarious Surgical faces NYSE delisting again</a>
+                    <p class="paper-abstract">2. [11 women shaping the future of robotics](https://www.therobotreport.com/11-women-shaping-the-future-of-robotics/)
+
+3. [Tesollo and Techman Robot unveil robot for high-mix, low-volume production](h...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/" class="paper-title" target="_blank">Vicarious Surgical faces NYSE delisting again</a>
+                    <p class="paper-abstract">2. [11 women shaping the future of robotics](https://www.therobotreport.com/11-women-shaping-the-future-of-robotics/)
+
+3. [Tesollo and Techman Robot unveil robot for high-mix, low-volume production](h...</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🎓 美国常青藤/顶尖高校新闻</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://news.harvard.edu/gazette/story/2026/03/aging-independently-by-design/" class="paper-title" target="_blank">Aging independently, by design</a>
+                    <p class="paper-abstract">Most older adults say they want to spend their golden years in their own homes. The reality is more complicated, says urban planning expert....
+
+2. [Conan O’Brien ’85 named Commencement speaker](https...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://news.berkeley.edu/2026/03/05/berkeley-voices-s2e5-deworming/" class="paper-title" target="_blank">What do parasitic worms and wages have in common? More than you think</a>
+                    <p class="paper-abstract">&lt;p&gt;Nearly 30 years of data from a landmark UC Berkeley project in Kenya show that treating children&#x27;s intestinal parasites does more than improve health — it boosts adult earnings and secures the live...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.caltech.edu/about/news/measuring-local-well-being-from-space" class="paper-title" target="_blank">Measuring Local Well-Being from Space</a>
+                    <p class="paper-abstract">&lt;p&gt;Since 1990, the United Nations (UN) has used the Human Development Index (HDI) to assess the development of a country using indicators of well-being and quality of life gathered via census data. HD...</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>💵 美国主流财经媒体</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.wsj.com/articles/wall-street-banks-prepare-to-sell-billions-of-dollars-of-x-loans-c609beb1?mod=pls_whats_news_us_business_f" class="paper-title" target="_blank">Wall Street Banks Prepare to Sell Billions of Dollars of X Loans</a>
+                    <p class="paper-abstract">Banks are hoping to sell the X debt at around 90 to 95 cents on the dollar....
+
+2. [Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service](https://www.wsj.com/articles/cana...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.ft.com/content/ab7d597d-5e72-4cbf-8d3b-53815695d68f" class="paper-title" target="_blank">Gulf states could review overseas investments to ease strains caused by Iran war</a>
+                    <p class="paper-abstract">Three leading Middle East economies consider options as US-Israeli campaign against Tehran continues...
+
+2. [Industry doubts Trump plan to insure Gulf oil tankers as Iran war halts transit](https://ww...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.bloomberg.com/news/features/2026-03-06/noem-dhs-ad-blitz-benefits-firms-linked-to-trump-campaigns" class="paper-title" target="_blank">Noem Ad Blitz Benefits Media Firms Linked to Trump Campaigns</a>
+                    <p class="paper-abstract">&lt;p&gt;Records show DHS spent millions through subcontractors that had worked with her top aide, Corey Lewandowski. Trump fired Noem on Thursday.&lt;/p&gt;...
+
+2. [Bloomberg Daybreak Asia: Oil Weekly Surge (Pod...</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🇬🇧 英国主流媒体</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.bbc.com/news/articles/cdr2214nmk8o?at_medium=RSS&amp;at_campaign=rss" class="paper-title" target="_blank">PM stands by decision not to join strikes on Iran and sends more jets to Qatar</a>
+                    <p class="paper-abstract">The PM said the best way forward was a &quot;negotiated settlement with Iran where they give up their nuclear ambitions&quot;....
+
+2. [First UK government flight from Middle East lands at Stansted Airport](http...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.theguardian.com/politics/2026/mar/05/kemi-badenoch-iran-war-nick-robinson" class="paper-title" target="_blank">Kemi is wrong about everything. Which is almost an achievement in itself | John Crace</a>
+                    <p class="paper-abstract">&lt;p&gt;The Tory leader’s appearance on the Today programme was sheer madness – and comedy gold&lt;/p&gt;&lt;p&gt;Cast your mind forward 10 years or so. Long after Kemi Badenoch has been sacked as Tory party leader wi...</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🇫🇷 法国主流媒体</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.lemonde.fr/international/live/2026/03/05/en-direct-guerre-au-moyen-orient-israel-bombarde-la-banlieue-sud-de-beyrouth-des-explosions-entendues-a-tel-aviv_6668663_3210.html" class="paper-title" target="_blank">EN DIRECT, guerre au Moyen-Orient : Israël dit mener une vague d’attaques contre « l’infrastructure du régime » à Téhéran ; l’Iran annonce lancer des missiles et des drones sur Tel-Aviv</a>
+                    <p class="paper-abstract">La télévision publique iranienne a fait état de « plusieurs explosions entendues dans l’ouest et l’est » de Téhéran. De son côté, Emmanuel Macron assure que la France « ne va pas s’engager dans cette ...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.france24.com/en/americas/20260306-us-venezuela-restore-diplomatic-ties-after-2019-break" class="paper-title" target="_blank">US, Venezuela restore diplomatic relations after Maduro’s ouster</a>
+                    <p class="paper-abstract">Venezuela said on Thursday it was committed to a “new stage” in relations with the United States based on mutual respect, after both countries agreed to restore diplomatic ties. Acting President Delcy...</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🇩🇪 德国主流媒体</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.spiegel.de/international/zeitgeist/reckless-suicidal-race-the-deadly-threat-posed-by-artificial-intelligence-a-8d17183a-90d8-4660-a1bb-d1f1ce560cae#ref=rss" class="paper-title" target="_blank">&quot;Reckless, Suicidal Race&quot;: The Deadly Threat Posed by Artificial Intelligence</a>
+                    <p class="paper-abstract">The rapid rise of artificial intelligence is just as dangerous as the invention of nuclear weapons. AI pioneers are warning that the technology must be brought under control while it&#x27;s still possible....</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.faz.net/aktuell/politik/usa-unter-trump/warum-trump-heimatschutzministerin-kristi-noem-gefeuert-hat-200603475.html" class="paper-title" target="_blank">Trump Feuert Kristi Noem: Ein „MAGA-Krieger“ fürs Heimatschutzministerium</a>
+                    <p class="paper-abstract">Donald Trump entlässt Heimatschutzministerin Kristi Noem. Ihr designierter Nachfolger ist der nächste treue MAGA-Anhänger Markwayne Mullin. Nur mit weniger Drama – hofft der Präsident....
+
+2. [Liveblo...</p>
+                </li>
+            </ul>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <a href="https://www.dw.com/en/iran-war-israel-launches-more-attacks-on-tehran-beirut/live-76238680?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank">Iran war: Israel launches more attacks on Tehran, Beirut</a>
+                    <p class="paper-abstract">Israel has said it struck targets in Lebanon and Iran as the war in the Middle East enters its seventh day. The attacks were part of a &quot;broad&quot; new wave of strikes on the Iranian capital, Israel said. ...</p>
                 </li>
             </ul>
         </div>
@@ -244,5 +505,7 @@
             <p>自动生成每日综合报告</p>
         </footer>
     </div>
+    
+    <a href="daily_papers_latest_03.pdf" class="pdf-download" download>📄 下载 PDF</a>
 </body>
 </html>
