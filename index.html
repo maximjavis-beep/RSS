@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSS 日报 - 全球学术与媒体</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .update-time {
+            background: rgba(255,255,255,0.2);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .paper-list {
+            list-style: none;
+        }
+        .paper-item {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        .paper-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        .paper-title {
+            font-weight: 600;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .paper-title:hover {
+            color: #764ba2;
+        }
+        .paper-abstract {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .paper-meta {
+            color: #999;
+            font-size: 0.85em;
+            margin-top: 8px;
+        }
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #667eea;
+            color: white;
+            border-radius: 12px;
+            font-size: 0.75em;
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 RSS 日报</h1>
+            <p>全球学术与媒体精选</p>
+            <div class="update-time">🕐 更新时间：2026年03月06日 11:33 北京时间</div>
+        </header>
+
+        <div class="card">
+            <h2>🤖 AI 论文 (arXiv)</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <span class="category-badge">arXiv AI</span>
+                    <a href="https://arxiv.org/abs/2603.03456" class="paper-title" target="_blank">Asymmetric Goal Drift in Coding Agents Under Value Conflict</a>
+                    <p class="paper-abstract">Agentic coding agents are increasingly deployed autonomously, at scale, and over long-context horizons...</p>
+                    <div class="paper-meta">arXiv:2603.03456v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">arXiv AI</span>
+                    <a href="https://arxiv.org/abs/2603.03565" class="paper-title" target="_blank">Build, Judge, Optimize: A Blueprint for Continuous Improvement of Multi-Agent Consumer Assistants</a>
+                    <p class="paper-abstract">Conversational shopping assistants (CSAs) represent a compelling application of agentic AI...</p>
+                    <div class="paper-meta">arXiv:2603.03565v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">arXiv AI</span>
+                    <a href="https://arxiv.org/abs/2603.03655" class="paper-title" target="_blank">Mozi: Governed Autonomy for Drug Discovery LLM Agents</a>
+                    <p class="paper-abstract">Tool-augmented large language model (LLM) agents promise to unify scientific reasoning with computation...</p>
+                    <div class="paper-meta">arXiv:2603.03655v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">arXiv AI</span>
+                    <a href="https://arxiv.org/abs/2603.03680" class="paper-title" target="_blank">MAGE: Meta-Reinforcement Learning for Language Agents toward Strategic Exploration and Exploitation</a>
+                    <p class="paper-abstract">Large Language Model (LLM) agents have demonstrated remarkable proficiency in learned tasks...</p>
+                    <div class="paper-meta">arXiv:2603.03680v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">arXiv AI</span>
+                    <a href="https://arxiv.org/abs/2603.03686" class="paper-title" target="_blank">AI4S-SDS: A Neuro-Symbolic Solvent Design System via Sparse MCTS and Differentiable Physics Alignment</a>
+                    <p class="paper-abstract">Automated design of chemical formulations is a cornerstone of materials science...</p>
+                    <div class="paper-meta">arXiv:2603.03686v1</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>🧠 机器学习 (arXiv ML)</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <span class="category-badge">ML</span>
+                    <a href="https://arxiv.org/abs/2603.03304" class="paper-title" target="_blank">Knowledge Graph and Hypergraph Transformers with Repository-Attention and Journey-Based Role Transport</a>
+                    <p class="paper-abstract">We present a concise architecture for joint training on sentences and structured data...</p>
+                    <div class="paper-meta">arXiv:2603.03304v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">ML</span>
+                    <a href="https://arxiv.org/abs/2603.03378" class="paper-title" target="_blank">AOI: Turning Failed Trajectories into Training Signals for Autonomous Cloud Diagnosis</a>
+                    <p class="paper-abstract">Large language model (LLM) agents offer a promising data-driven approach to automating Site Reliability Engineering...</p>
+                    <div class="paper-meta">arXiv:2603.03378v2</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">ML</span>
+                    <a href="https://arxiv.org/abs/2603.03388" class="paper-title" target="_blank">RADAR: Learning to Route with Asymmetry-aware DistAnce Representations</a>
+                    <p class="paper-abstract">Recent neural solvers have achieved strong performance on vehicle routing problems (VRPs)...</p>
+                    <div class="paper-meta">arXiv:2603.03388v2</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>👁️ 计算机视觉 (arXiv CV)</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <span class="category-badge">CV</span>
+                    <a href="https://arxiv.org/abs/2603.03418" class="paper-title" target="_blank">mHC-HSI: Clustering-Guided Hyper-Connection Mamba for Hyperspectral Image Classification</a>
+                    <p class="paper-abstract">Recently, DeepSeek has invented the manifold-constrained hyper-connection (mHC) approach...</p>
+                    <div class="paper-meta">arXiv:2603.03418v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">CV</span>
+                    <a href="https://arxiv.org/abs/2603.03437" class="paper-title" target="_blank">Beyond Accuracy: Evaluating Visual Grounding In Multimodal Medical Reasoning</a>
+                    <p class="paper-abstract">Recent work shows that text-only reinforcement learning with verifiable rewards (RLVR) can match or outperform...</p>
+                    <div class="paper-meta">arXiv:2603.03437v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">CV</span>
+                    <a href="https://arxiv.org/abs/2603.03447" class="paper-title" target="_blank">Proact-VL: A Proactive VideoLLM for Real-Time AI Companions</a>
+                    <p class="paper-abstract">Proactive and real-time interactive experiences are essential for human-like AI companions...</p>
+                    <div class="paper-meta">arXiv:2603.03447v1</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>💬 自然语言处理 (arXiv NLP)</h2>
+            <ul class="paper-list">
+                <li class="paper-item">
+                    <span class="category-badge">NLP</span>
+                    <a href="https://arxiv.org/abs/2603.03290" class="paper-title" target="_blank">AriadneMem: Threading the Maze of Lifelong Memory for LLM Agents</a>
+                    <p class="paper-abstract">Long-horizon LLM agents require memory systems that remain accurate under fixed context budgets...</p>
+                    <div class="paper-meta">arXiv:2603.03290v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">NLP</span>
+                    <a href="https://arxiv.org/abs/2603.03291" class="paper-title" target="_blank">One Bias After Another: Mechanistic Reward Shaping and Persistent Biases in Language Reward Models</a>
+                    <p class="paper-abstract">Reward Models (RMs) are crucial for online alignment of language models (LMs) with human preferences...</p>
+                    <div class="paper-meta">arXiv:2603.03291v1</div>
+                </li>
+                <li class="paper-item">
+                    <span class="category-badge">NLP</span>
+                    <a href="https://arxiv.org/abs/2603.03292" class="paper-title" target="_blank">From Conflict to Consensus: Boosting Medical Reasoning via Multi-Round Agentic RAG</a>
+                    <p class="paper-abstract">Large Language Models (LLMs) exhibit high reasoning capacity in medical question-answering...</p>
+                    <div class="paper-meta">arXiv:2603.03292v1</div>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>数据来源: arXiv + Nature + Science + 全球顶尖高校 + 美英德法主流媒体</p>
+            <p>自动生成每日综合报告</p>
+        </footer>
+    </div>
+</body>
+</html>
