@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 全球学术与媒体日报</title>
+    
+    <!-- 微信分享优化 - Open Graph -->
+    <meta property="og:title" content="📚 全球学术与媒体日报">
+    <meta property="og:description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://rss-seven-kappa-47.vercel.app/">
+    <meta property="og:image" content="https://rss-seven-kappa-47.vercel.app/cover.jpg">
+    
+    <!-- 微信专用 -->
+    <meta name="description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
+    <meta itemprop="name" content="📚 全球学术与媒体日报">
+    <meta itemprop="description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
+    <meta itemprop="image" content="https://rss-seven-kappa-47.vercel.app/cover.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="📚 全球学术与媒体日报">
+    <meta name="twitter:description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
+    <meta name="twitter:image" content="https://rss-seven-kappa-47.vercel.app/cover.jpg">
+    
+    <!-- 微信浏览器优化 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .loading {
+            text-align: center;
+            color: white;
+        }
+        .loading-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        .loading-text {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="loading-icon">📚</div>
+        <div class="loading-text">正在加载全球学术与媒体日报...</div>
+    </div>
+    
+    <script>
+        // 检测微信浏览器
+        var isWeixin = /MicroMessenger/i.test(navigator.userAgent);
+        
+        // 微信分享数据
+        window.shareData = {
+            title: '📚 全球学术与媒体日报',
+            desc: '每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告',
+            link: 'https://rss-seven-kappa-47.vercel.app/',
+            imgUrl: 'https://rss-seven-kappa-47.vercel.app/cover.jpg'
+        };
+        
+        // 微信 JSBridge 准备就绪
+        document.addEventListener('WeixinJSBridgeReady', function() {
+            // 分享给朋友
+            WeixinJSBridge.on('menu:share:appmessage', function() {
+                WeixinJSBridge.invoke('sendAppMessage', {
+                    title: window.shareData.title,
+                    desc: window.shareData.desc,
+                    link: window.shareData.link,
+                    imgUrl: window.shareData.imgUrl
+                });
+            });
+            
+            // 分享到朋友圈
+            WeixinJSBridge.on('menu:share:timeline', function() {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    title: window.shareData.title,
+                    link: window.shareData.link,
+                    imgUrl: window.shareData.imgUrl
+                });
+            });
+        });
+        
+        // 延迟跳转
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 100);
+    </script>
+</body>
+</html>
