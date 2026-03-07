@@ -49,68 +49,46 @@
             margin-top: 15px;
             font-size: 0.9em;
         }
-        .card {
+        .content {
             background: white;
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
-        .card h2 {
-            color: #333;
-            margin-bottom: 20px;
+        .content h1 { 
+            color: #667eea; 
+            font-size: 1.8em; 
+            margin: 30px 0 20px 0;
             padding-bottom: 10px;
             border-bottom: 3px solid #667eea;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.5em;
         }
-        .card h3 {
-            color: #555;
+        .content h2 { 
+            color: #764ba2; 
+            font-size: 1.4em; 
             margin: 25px 0 15px 0;
-            padding-left: 10px;
-            border-left: 3px solid #764ba2;
-            font-size: 1.2em;
         }
-        .paper-list { list-style: none; }
-        .paper-list li {
-            padding: 15px 20px;
-            margin-bottom: 12px;
-            background: #f8f9fa;
-            border-radius: 12px;
+        .content h3 {
+            color: #333;
+            font-size: 1.1em;
+            margin: 20px 0 10px 0;
+        }
+        .content p { margin: 10px 0; color: #444; }
+        .content a { color: #667eea; text-decoration: none; }
+        .content a:hover { text-decoration: underline; }
+        .content ul { margin: 10px 0 10px 20px; }
+        .content li { margin: 8px 0; }
+        .content blockquote {
             border-left: 4px solid #667eea;
-            transition: all 0.3s ease;
-        }
-        .paper-list li:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
-        }
-        .paper-title {
-            font-weight: 600;
-            color: #667eea;
-            text-decoration: none;
-            font-size: 1em;
-            display: block;
-            margin-bottom: 6px;
-        }
-        .paper-title:hover { color: #764ba2; }
-        .abstract {
+            padding-left: 15px;
+            margin: 10px 0;
             color: #666;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-        blockquote {
-            border-left: 4px solid #667eea;
-            padding-left: 20px;
-            margin: 15px 0;
-            color: #555;
             font-style: italic;
         }
-        hr {
-            border: none;
-            border-top: 2px solid #e0e0e0;
-            margin: 30px 0;
+        .content hr { 
+            border: none; 
+            border-top: 1px solid #eee; 
+            margin: 30px 0; 
         }
         footer {
             text-align: center;
@@ -118,9 +96,10 @@
             color: rgba(255,255,255,0.8);
             font-size: 0.9em;
         }
+        footer a { color: white; }
         @media (max-width: 768px) {
             header h1 { font-size: 1.8em; }
-            .card { padding: 20px; }
+            .content { padding: 20px; }
         }
     </style>
 </head>
@@ -128,974 +107,850 @@
     <div class="container">
         <header>
             <h1>📚 全球学术与媒体日报</h1>
-            <p>自动生成的每日综合报告</p>
-            <div class="update-time">更新时间: 2026年03月07日03:05</div>
+            <p>每日自动抓取 arXiv、Nature、Science 及全球主流媒体</p>
+            <div class="update-time">⏰ 更新时间: 2026年03月07日10:13</div>
         </header>
         
-        <div class="card">
-            <h1>📚 全球学术与媒体日报 - 2026年03月07日</h1>
-
-<blockquote>自动生成的每日综合报告</blockquote>
-<blockquote>数据来源: arXiv + Nature + Science + 全球顶尖高校 + 美英德法主流媒体</blockquote>
-
-<hr>
-
-<h2>🤖 AI 论文 (arXiv)</h2>
-
-
-<h3>arXiv AI</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04448" class="paper-title" target="_blank" rel="noopener noreferrer">SkillNet: Create, Evaluate, and Connect AI Skills</a>
-<p class="abstract">arXiv:2603.04448v1 Announce Type: new </p></li>
-</ul>
-Abstract: Current AI agents can flexibly invoke tools and execute complex tasks, yet their long-term advancement is hindered by the lack of systematic accumulation and transfer of skills. Without a unified mechanism for skill consolidation, agents frequently ``...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04457" class="paper-title" target="_blank" rel="noopener noreferrer">Capability Thresholds and Manufacturing Topology: How Embodied Intelligence Triggers Phase Transitions in Economic Geography</a>
-<p class="abstract">arXiv:2603.04457v1 Announce Type: new </p></li>
-</ul>
-Abstract: The fundamental topology of manufacturing has not undergone a paradigm-level transformation since Henry Ford's moving assembly line in 1913. Every major innovation of the past century, from the Toyota Production System to Industry 4.0, has optimized w...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04514" class="paper-title" target="_blank" rel="noopener noreferrer">Progressive Refinement Regulation for Accelerating Diffusion Language Model Decoding</a>
-<p class="abstract">arXiv:2603.04514v1 Announce Type: new </p></li>
-</ul>
-Abstract: Diffusion language models generate text through iterative denoising under a uniform refinement rule applied to all tokens. However, tokens stabilize at different rates in practice, leading to substantial redundant refinement and motivating refinement ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04528" class="paper-title" target="_blank" rel="noopener noreferrer">Discovering mathematical concepts through a multi-agent system</a>
-<p class="abstract">arXiv:2603.04528v1 Announce Type: new </p></li>
-</ul>
-Abstract: Mathematical concepts emerge through an interplay of processes, including experimentation, efforts at proof, and counterexamples. In this paper, we present a new multi-agent model for computational mathematical discovery based on this observation. Our...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04549" class="paper-title" target="_blank" rel="noopener noreferrer">Adaptive Memory Admission Control for LLM Agents</a>
-<p class="abstract">arXiv:2603.04549v1 Announce Type: new </p></li>
-</ul>
-Abstract: LLM-based agents increasingly rely on long-term memory to support multi-session reasoning and interaction, yet current systems provide little control over what information is retained. In practice, agents either accumulate large volumes of conversatio...
-
-
-<h3>arXiv Machine Learning</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04418" class="paper-title" target="_blank" rel="noopener noreferrer">Decorrelating the Future: Joint Frequency Domain Learning for Spatio-temporal Forecasting</a>
-<p class="abstract">arXiv:2603.04418v1 Announce Type: new </p></li>
-</ul>
-Abstract: Standard direct forecasting models typically rely on point-wise objectives such as Mean Squared Error, which fail to capture the complex spatio-temporal dependencies inherent in graph-structured signals. While recent frequency-domain approaches such a...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04420" class="paper-title" target="_blank" rel="noopener noreferrer">Machine Learning for Complex Systems Dynamics: Detecting Bifurcations in Dynamical Systems with Deep Neural Networks</a>
-<p class="abstract">arXiv:2603.04420v1 Announce Type: new </p></li>
-</ul>
-Abstract: Critical transitions are the abrupt shifts between qualitatively different states of a system, and they are crucial to understanding tipping points in complex dynamical systems across ecology, climate science, and biology. Detecting these shifts typic...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04422" class="paper-title" target="_blank" rel="noopener noreferrer">FedEMA-Distill: Exponential Moving Average Guided Knowledge Distillation for Robust Federated Learning</a>
-<p class="abstract">arXiv:2603.04422v1 Announce Type: new </p></li>
-</ul>
-Abstract: Federated learning (FL) often degrades when clients hold heterogeneous non-Independent and Identically Distributed (non-IID) data and when some clients behave adversarially, leading to client drift, slow convergence, and high communication overhead. T...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04426" class="paper-title" target="_blank" rel="noopener noreferrer">Delta-Crosscoder: Robust Crosscoder Model Diffing in Narrow Fine-Tuning Regimes</a>
-<p class="abstract">arXiv:2603.04426v1 Announce Type: new </p></li>
-</ul>
-Abstract: Model diffing methods aim to identify how fine-tuning changes a model's internal representations. Crosscoders approach this by learning shared dictionaries of interpretable latent directions between base and fine-tuned models. However, existing formul...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04427" class="paper-title" target="_blank" rel="noopener noreferrer">Thin Keys, Full Values: Reducing KV Cache via Low-Dimensional Attention Selection</a>
-<p class="abstract">arXiv:2603.04427v1 Announce Type: new </p></li>
-</ul>
-Abstract: Standard transformer attention uses identical dimensionality for queries, keys, and values ($d_q = d_k = d_v = \dmodel$). Our insight is that these components serve fundamentally different roles, and this symmetry is unnecessary. Queries and keys prod...
-
-
-<h3>arXiv Computer Vision</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04405" class="paper-title" target="_blank" rel="noopener noreferrer">Lost in Translation: How Language Re-Aligns Vision for Cross-Species Pathology</a>
-<p class="abstract">arXiv:2603.04405v1 Announce Type: new </p></li>
-</ul>
-Abstract: Foundation models are increasingly applied to computational pathology, yet their behavior under cross-cancer and cross-species transfer remains unspecified. This study investigated how fine-tuning CPath-CLIP affects cancer detection under same-cancer,...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04509" class="paper-title" target="_blank" rel="noopener noreferrer">Recognition of Daily Activities through Multi-Modal Deep Learning: A Video, Pose, and Object-Aware Approach for Ambient Assisted Living</a>
-<p class="abstract">arXiv:2603.04509v1 Announce Type: new </p></li>
-</ul>
-Abstract: Recognition of daily activities is a critical element for effective Ambient Assisted Living (AAL) systems, particularly to monitor the well-being and support the independence of older adults in indoor environments. However, developing robust activity ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04538" class="paper-title" target="_blank" rel="noopener noreferrer">InverseNet: Benchmarking Operator Mismatch and Calibration Across Compressive Imaging Modalities</a>
-<p class="abstract">arXiv:2603.04538v1 Announce Type: new </p></li>
-</ul>
-Abstract: State-of-the-art EfficientSCI loses 20.58 dB when its assumed forward operator deviates from physical reality in just eight parameters, yet no existing benchmark quantifies operator mismatch, the default condition in deployed compressive imaging syste...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04562" class="paper-title" target="_blank" rel="noopener noreferrer">Fusion and Grouping Strategies in Deep Learning for Local Climate Zone Classification of Multimodal Remote Sensing Data</a>
-<p class="abstract">arXiv:2603.04562v1 Announce Type: new </p></li>
-</ul>
-Abstract: Local Climate Zones (LCZs) give a zoning map to study urban structures and land use and analyze the impact of urbanization on local climate. Multimodal remote sensing enables LCZ classification, for which data fusion is significant for improving accur...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04565" class="paper-title" target="_blank" rel="noopener noreferrer">Structure-Guided Histopathology Synthesis via Dual-LoRA Diffusion</a>
-<p class="abstract">arXiv:2603.04565v1 Announce Type: new </p></li>
-</ul>
-Abstract: Histopathology image synthesis plays an important role in tissue restoration, data augmentation, and modeling of tumor microenvironments. However, existing generative methods typically address restoration and generation as separate tasks, although bot...
-
-
-<h3>arXiv NLP</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04406" class="paper-title" target="_blank" rel="noopener noreferrer">CTRL-RAG: Contrastive Likelihood Reward Based Reinforcement Learning for Context-Faithful RAG Models</a>
-<p class="abstract">arXiv:2603.04406v1 Announce Type: new </p></li>
-</ul>
-Abstract: With the growing use of Retrieval-Augmented Generation (RAG), training large language models (LLMs) for context-sensitive reasoning and faithfulness is increasingly important. Existing RAG-oriented reinforcement learning (RL) methods rely on external ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04407" class="paper-title" target="_blank" rel="noopener noreferrer">Semantic Containment as a Fundamental Property of Emergent Misalignment</a>
-<p class="abstract">arXiv:2603.04407v1 Announce Type: new </p></li>
-</ul>
-Abstract: Fine-tuning language models on narrowly harmful data causes emergent misalignment (EM) -- behavioral failures extending far beyond training distributions. Recent work demonstrates compartmentalization of misalignment behind contextual triggers, but th...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04408" class="paper-title" target="_blank" rel="noopener noreferrer">Probing Memes in LLMs: A Paradigm for the Entangled Evaluation World</a>
-<p class="abstract">arXiv:2603.04408v1 Announce Type: new </p></li>
-</ul>
-Abstract: Current evaluation paradigms for large language models (LLMs) characterize models and datasets separately, yielding coarse descriptions: items in datasets are treated as pre-labeled entries, and models are summarized by overall scores such as accuracy...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04409" class="paper-title" target="_blank" rel="noopener noreferrer">Unpacking Human Preference for LLMs: Demographically Aware Evaluation with the HUMAINE Framework</a>
-<p class="abstract">arXiv:2603.04409v1 Announce Type: new </p></li>
-</ul>
-Abstract: The evaluation of large language models faces significant challenges. Technical benchmarks often lack real-world relevance, while existing human preference evaluations suffer from unrepresentative sampling, superficial assessment depth, and single-met...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04410" class="paper-title" target="_blank" rel="noopener noreferrer">SalamahBench: Toward Standardized Safety Evaluation for Arabic Language Models</a>
-<p class="abstract">arXiv:2603.04410v1 Announce Type: new </p></li>
-</ul>
-Abstract: Safety alignment in Language Models (LMs) is fundamental for trustworthy AI. However, while different stakeholders are trying to leverage Arabic Language Models (ALMs), systematic safety evaluation of ALMs remains largely underexplored, limiting their...
-
-
-<h3>arXiv Robotics</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04463" class="paper-title" target="_blank" rel="noopener noreferrer">GAIDE: Graph-based Attention Masking for Spatial- and Embodiment-aware Motion Planning</a>
-<p class="abstract">arXiv:2603.04463v1 Announce Type: new </p></li>
-</ul>
-Abstract: Sampling-based motion planning algorithms are widely used for motion planning of robotic manipulators, but they often struggle with sample inefficiency in high-dimensional configuration spaces due to their reliance on uniform or hand-crafted informed ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04466" class="paper-title" target="_blank" rel="noopener noreferrer">Act-Observe-Rewrite: Multimodal Coding Agents as In-Context Policy Learners for Robot Manipulation</a>
-<p class="abstract">arXiv:2603.04466v1 Announce Type: new </p></li>
-</ul>
-Abstract: Can a multimodal language model learn to manipulate physical objects by reasoning about its own failures-without gradient updates, demonstrations, or reward engineering? We argue the answer is yes, under conditions we characterise precisely. We presen...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04470" class="paper-title" target="_blank" rel="noopener noreferrer">Efficient Autonomous Navigation of a Quadruped Robot in Underground Mines on Edge Hardware</a>
-<p class="abstract">arXiv:2603.04470v1 Announce Type: new </p></li>
-</ul>
-Abstract: Embodied navigation in underground mines faces significant challenges, including narrow passages, uneven terrain, near-total darkness, GPS-denied conditions, and limited communication infrastructure. While recent learning-based approaches rely on GPU-...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04531" class="paper-title" target="_blank" rel="noopener noreferrer">PTLD: Sim-to-real Privileged Tactile Latent Distillation for Dexterous Manipulation</a>
-<p class="abstract">arXiv:2603.04531v1 Announce Type: new </p></li>
-</ul>
-Abstract: Tactile dexterous manipulation is essential to automating complex household tasks, yet learning effective control policies remains a challenge. While recent work has relied on imitation learning, obtaining high quality demonstrations for multi-fingere...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04547" class="paper-title" target="_blank" rel="noopener noreferrer">Many-RRT*: Robust Joint-Space Trajectory Planning for Serial Manipulators</a>
-<p class="abstract">arXiv:2603.04547v1 Announce Type: new </p></li>
-</ul>
-Abstract: The rapid advancement of high degree-of-freedom (DoF) serial manipulators necessitates the use of swift, sampling-based motion planners for high-dimensional spaces. While sampling-based planners like the Rapidly-Exploring Random Tree (RRT) are widely ...
-
-
-<h3>arXiv Multi-Agent Systems</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04474" class="paper-title" target="_blank" rel="noopener noreferrer">From Spark to Fire: Modeling and Mitigating Error Cascades in LLM-Based Multi-Agent Collaboration</a>
-<p class="abstract">arXiv:2603.04474v1 Announce Type: new </p></li>
-</ul>
-Abstract: Large Language Model-based Multi-Agent Systems (LLM-MAS) are increasingly applied to complex collaborative scenarios. However, their collaborative mechanisms may cause minor inaccuracies to gradually solidify into system-level false consensus through ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04628" class="paper-title" target="_blank" rel="noopener noreferrer">Strategic Interactions in Multi-Level Stackelberg Games with Non-Follower Agents and Heterogeneous Leaders</a>
-<p class="abstract">arXiv:2603.04628v1 Announce Type: new </p></li>
-</ul>
-Abstract: Strategic interaction in congested systems is commonly modelled using Stackelberg games, where competing leaders anticipate the behaviour of self-interested followers. A key limitation of existing models is that they typically ignore agents who do not...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04833" class="paper-title" target="_blank" rel="noopener noreferrer">SCoUT: Scalable Communication via Utility-Guided Temporal Grouping in Multi-Agent Reinforcement Learning</a>
-<p class="abstract">arXiv:2603.04833v1 Announce Type: new </p></li>
-</ul>
-Abstract: Communication can improve coordination in partially observed multi-agent reinforcement learning (MARL), but learning \emph{when} and \emph{who} to communicate with requires choosing among many possible sender-recipient pairs, and the effect of any sin...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.03848" class="paper-title" target="_blank" rel="noopener noreferrer">Dual-Interaction-Aware Cooperative Control Strategy for Alleviating Mixed Traffic Congestion</a>
-<p class="abstract">arXiv:2603.03848v1 Announce Type: cross </p></li>
-</ul>
-Abstract: As Intelligent Transportation System (ITS) develops, Connected and Automated Vehicles (CAVs) are expected to significantly reduce traffic congestion through cooperative strategies, such as in bottleneck areas. However, the uncertainty and diversity ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04421" class="paper-title" target="_blank" rel="noopener noreferrer">Do Mixed-Vendor Multi-Agent LLMs Improve Clinical Diagnosis?</a>
-<p class="abstract">arXiv:2603.04421v1 Announce Type: cross </p></li>
-</ul>
-Abstract: Multi-agent large language model (LLM) systems have emerged as a promising approach for clinical diagnosis, leveraging collaboration among agents to refine medical reasoning. However, most existing frameworks rely on single-vendor teams (e.g., multi...
-
-
-<h3>arXiv Neural Networks</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2112.13243" class="paper-title" target="_blank" rel="noopener noreferrer">Motion Illusions Generated Using Predictive Neural Networks Also Fool Humans</a>
-<p class="abstract">arXiv:2112.13243v2 Announce Type: replace </p></li>
-</ul>
-Abstract: Why do we sometimes perceive static images as if they were moving? Visual motion illusions enjoy a sustained popularity, yet there is no definitive answer to the question of why they work. Here we present evidence in favor of the hypothesis that i...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2601.01832" class="paper-title" target="_blank" rel="noopener noreferrer">Yukthi Opus: A Multi-Chain Hybrid Metaheuristic for Large-Scale NP-Hard Optimization</a>
-<p class="abstract">arXiv:2601.01832v3 Announce Type: replace </p></li>
-</ul>
-Abstract: We present Yukthi Opus (YO), a multi-chain hybrid metaheuristic designed for NP-hard optimization under explicit evaluation budget constraints. YO integrates three complementary mechanisms in a structured two-phase architecture: Markov Chain Monte...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.03201" class="paper-title" target="_blank" rel="noopener noreferrer">A Dynamical Theory of Sequential Retrieval in Input-Driven Hopfield Networks</a>
-<p class="abstract">arXiv:2603.03201v2 Announce Type: replace </p></li>
-</ul>
-Abstract: Reasoning is the ability to integrate internal states and external inputs in a meaningful and semantically consistent flow. Contemporary machine learning (ML) systems increasingly rely on such sequential reasoning, from language understanding to m...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2510.22503" class="paper-title" target="_blank" rel="noopener noreferrer">LLEMA: Evolutionary Search with LLMs for Multi-Objective Materials Discovery</a>
-<p class="abstract">arXiv:2510.22503v2 Announce Type: replace-cross </p></li>
-</ul>
-Abstract: Materials discovery requires navigating vast chemical and structural spaces while satisfying multiple, often conflicting, objectives. We present LLM-guided Evolution for MAterials discovery (LLEMA), a unified framework that couples the scien...
-
-
-<h3>arXiv Information Retrieval</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04402" class="paper-title" target="_blank" rel="noopener noreferrer">SearchGym: A Modular Infrastructure for Cross-Platform Benchmarking and Hybrid Search Orchestration</a>
-<p class="abstract">arXiv:2603.04402v1 Announce Type: new </p></li>
-</ul>
-Abstract: The rapid growth of Retrieval-Augmented Generation (RAG) has created a proliferation of toolkits, yet a fundamental gap remains between experimental prototypes and robust, production-ready systems. We present SearchGym, a modular infrastructure design...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04403" class="paper-title" target="_blank" rel="noopener noreferrer">FinRetrieval: A Benchmark for Financial Data Retrieval by AI Agents</a>
-<p class="abstract">arXiv:2603.04403v1 Announce Type: new </p></li>
-</ul>
-Abstract: AI agents increasingly assist with financial research, yet no benchmark evaluates their ability to retrieve specific numeric values from structured databases. We introduce FinRetrieval, a benchmark of 500 financial retrieval questions with ground trut...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04404" class="paper-title" target="_blank" rel="noopener noreferrer">Signal in the Noise: Decoding the Reality of Airline Service Quality with Large Language Models</a>
-<p class="abstract">arXiv:2603.04404v1 Announce Type: new </p></li>
-</ul>
-Abstract: Traditional service quality metrics often fail to capture the nuanced drivers of passenger satisfaction hidden within unstructured online feedback. This study validates a Large Language Model (LLM) framework designed to extract granular insights from ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04532" class="paper-title" target="_blank" rel="noopener noreferrer">Still Fresh? Evaluating Temporal Drift in Retrieval Benchmarks</a>
-<p class="abstract">arXiv:2603.04532v1 Announce Type: new </p></li>
-</ul>
-Abstract: Information retrieval (IR) benchmarks typically follow the Cranfield paradigm, relying on static and predefined corpora. However, temporal changes in technical corpora, such as API deprecations and code reorganizations, can render existing benchmarks ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04743" class="paper-title" target="_blank" rel="noopener noreferrer">DARE: Aligning LLM Agents with the R Statistical Ecosystem via Distribution-Aware Retrieval</a>
-<p class="abstract">arXiv:2603.04743v1 Announce Type: new </p></li>
-</ul>
-Abstract: Large Language Model (LLM) agents can automate data-science workflows, but many rigorous statistical methods implemented in R remain underused because LLMs struggle with statistical knowledge and tool retrieval. Existing retrieval-augmented approaches...
-
-
-<hr>
-
-<h2>🧮 理论数学类</h2>
-
-
-<h3>arXiv Data Structures & Algorithms</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04689" class="paper-title" target="_blank" rel="noopener noreferrer">Generalizing Fair Top-$k$ Selection: An Integrative Approach</a>
-<p class="abstract">arXiv:2603.04689v1 Announce Type: new </p></li>
-</ul>
-Abstract: Fair top-$k$ selection, which ensures appropriate proportional representation of members from minority or historically disadvantaged groups among the top-$k$ selected candidates, has drawn significant attention. We study the problem of finding a fair ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05482" class="paper-title" target="_blank" rel="noopener noreferrer">Finding Short Paths on Simple Polytopes</a>
-<p class="abstract">arXiv:2603.05482v1 Announce Type: new </p></li>
-</ul>
-Abstract: We prove that computing a shortest monotone path to the optimum of a linear program over a simple polytope is NP-hard, thus resolving a 2022 open question of De Loera, Kafer, and Sanit\`a. As a consequence, finding a shortest sequence of pivots to an ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04635" class="paper-title" target="_blank" rel="noopener noreferrer">Optimal Prediction-Augmented Algorithms for Testing Independence of Distributions</a>
-<p class="abstract">arXiv:2603.04635v1 Announce Type: cross </p></li>
-</ul>
-Abstract: Independence testing is a fundamental problem in statistical inference: given samples from a joint distribution $p$ over multiple random variables, the goal is to determine whether $p$ is a product distribution or is $\epsilon$-far from all product ...
-
-
-<h3>arXiv Computational Complexity</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05054" class="paper-title" target="_blank" rel="noopener noreferrer">Attacking the Polynomials in the Maze of Finite Fields problem</a>
-<p class="abstract">arXiv:2603.05054v1 Announce Type: new </p></li>
-</ul>
-Abstract: In April 2025 GMV announced a competition for finding the best method to solve a particular polynomial system over a finite field. In this paper we provide a method for solving the given equation system significantly faster than what is possible by br...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05140" class="paper-title" target="_blank" rel="noopener noreferrer">Recurrent Graph Neural Networks and Arithmetic Circuits</a>
-<p class="abstract">arXiv:2603.05140v1 Announce Type: new </p></li>
-</ul>
-Abstract: We characterise the computational power of recurrent graph neural networks (GNNs) in terms of arithmetic circuits over the real numbers. Our networks are not restricted to aggregate-combine GNNs or other particular types. Generalizing similar notions ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04689" class="paper-title" target="_blank" rel="noopener noreferrer">Generalizing Fair Top-$k$ Selection: An Integrative Approach</a>
-<p class="abstract">arXiv:2603.04689v1 Announce Type: cross </p></li>
-</ul>
-Abstract: Fair top-$k$ selection, which ensures appropriate proportional representation of members from minority or historically disadvantaged groups among the top-$k$ selected candidates, has drawn significant attention. We study the problem of finding a fai...
-
-
-<h3>arXiv Computational Geometry</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04665" class="paper-title" target="_blank" rel="noopener noreferrer">Hypercube drawings with no long plane paths</a>
-<p class="abstract">arXiv:2603.04665v1 Announce Type: new </p></li>
-</ul>
-Abstract: We study the existence of plane substructures in drawings of the $d$-dimensional hypercube graph $Q_d$. We construct drawings of $Q_d$ which contain no plane subgraph with more than $2d-2$ edges, no plane path with more than $2d-3$ edges, and no plane...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04812" class="paper-title" target="_blank" rel="noopener noreferrer">Quadratic polarity and polar Fenchel-Young divergences from the canonical Legendre polarity</a>
-<p class="abstract">arXiv:2603.04812v1 Announce Type: new </p></li>
-</ul>
-Abstract: Polarity is a fundamental reciprocal duality of $n$-dimensional projective geometry which associates to points polar hyperplanes, and more generally $k$-dimensional convex bodies to polar $(n-1-k)$-dimensional convex bodies. It is well-known that the ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04863" class="paper-title" target="_blank" rel="noopener noreferrer">An Optimal Algorithm for Computing Many Faces in Line Arrangements</a>
-<p class="abstract">arXiv:2603.04863v1 Announce Type: new </p></li>
-</ul>
-Abstract: Given a set of $m$ points and a set of $n$ lines in the plane, we consider the problem of computing the faces of the arrangement of the lines that contain at least one point. In this paper, we present an $O(m^{2/3}n^{2/3}+(n+m)\log n)$ time algorithm ...
-
-
-<h3>arXiv Discrete Mathematics</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05007" class="paper-title" target="_blank" rel="noopener noreferrer">Positional s-of-k games</a>
-<p class="abstract">arXiv:2603.05007v1 Announce Type: new </p></li>
-</ul>
-Abstract: We introduce a general framework for positional games in which players score points by claiming a prescribed portion of each winning set, extending the notion of scoring Maker-Breaker games. In the scoring variant, Maker gains a point by fully claimin...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05100" class="paper-title" target="_blank" rel="noopener noreferrer">Minimal toughness in subclasses of weakly chordal graphs</a>
-<p class="abstract">arXiv:2603.05100v1 Announce Type: cross </p></li>
-</ul>
-Abstract: The toughness of a graph $G$ is defined as the largest real number $t$ such that for any set $S\subseteq V(G)$ such that $G-S$ is disconnected, $S$ has at least $t$ times more elements than $G-S$ has components (unless $G$ is complete, in which case...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05205" class="paper-title" target="_blank" rel="noopener noreferrer">Structural Properties of Shortest Flip Sequences Between Plane Spanning Trees</a>
-<p class="abstract">arXiv:2603.05205v1 Announce Type: cross </p></li>
-</ul>
-Abstract: We study the reconfiguration of plane spanning trees on point sets in the plane in convex position, where a reconfiguration step (flip) replaces one edge with another, yielding again a plane spanning tree. The flip distance between two trees is then...
-
-
-<h3>arXiv Game Theory</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05461" class="paper-title" target="_blank" rel="noopener noreferrer">Equilibrium for max-plus payoff</a>
-<p class="abstract">arXiv:2603.05461v1 Announce Type: new </p></li>
-</ul>
-Abstract: We study equilibrium concepts in non-cooperative games under uncertainty where both beliefs and mixed strategies are represented by non-additive measures (capacities). In contrast to the classical Nash framework based on additive probabilities and lin...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2602.23116" class="paper-title" target="_blank" rel="noopener noreferrer">Regularized Online RLHF with Generalized Bilinear Preferences</a>
-<p class="abstract">arXiv:2602.23116v2 Announce Type: cross </p></li>
-</ul>
-Abstract: We consider the problem of contextual online RLHF with general preferences, where the goal is to identify the Nash Equilibrium. We adopt the Generalized Bilinear Preference Model (GBPM) to capture potentially intransitive preferences via low-rank, s...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04455" class="paper-title" target="_blank" rel="noopener noreferrer">Large Language Models as Bidding Agents in Repeated HetNet Auction</a>
-<p class="abstract">arXiv:2603.04455v1 Announce Type: cross </p></li>
-</ul>
-Abstract: This paper investigates the integration of large language models (LLMs) as reasoning agents in repeated spectrum auctions within heterogeneous networks (HetNets). While auction-based mechanisms have been widely employed for efficient resource alloca...
-
-
-<h3>arXiv Logic in CS</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04450" class="paper-title" target="_blank" rel="noopener noreferrer">MPBMC: Multi-Property Bounded Model Checking with GNN-guided Clustering</a>
-<p class="abstract">arXiv:2603.04450v1 Announce Type: new </p></li>
-</ul>
-Abstract: Formal verification of designs with multiple properties has been a long-standing challenge for the verification research community. The task of coming up with an effective strategy that can efficiently cluster properties to be solved together has insp...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04512" class="paper-title" target="_blank" rel="noopener noreferrer">Fusions of One-Variable First-Order Modal Logics</a>
-<p class="abstract">arXiv:2603.04512v1 Announce Type: new </p></li>
-</ul>
-Abstract: We investigate preservation results for the independent fusion of one-variable first-order modal logics. We show that, without equality, Kripke completeness and decidability of the global and local consequence relation are preserved, under both expand...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04530" class="paper-title" target="_blank" rel="noopener noreferrer">Complete Diagrammatic Axiomatisations of Relative Entropy</a>
-<p class="abstract">arXiv:2603.04530v1 Announce Type: new </p></li>
-</ul>
-Abstract: Relative entropy is a fundamental class of distances between probability distributions, with widespread applications in probability theory, statistics, and machine learning. In this work, we study relative entropy from a categorical perspective, viewi...
-
-
-<hr>
-
-<h2>🌐 应用/交叉类</h2>
-
-
-<h3>arXiv Human-Computer Interaction</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04537" class="paper-title" target="_blank" rel="noopener noreferrer">How Professional Visual Artists are Negotiating Generative AI in the Workplace</a>
-<p class="abstract">arXiv:2603.04537v1 Announce Type: new </p></li>
-</ul>
-Abstract: Generative AI has been heavily critiqued by artists in both popular media and HCI scholarship. However, more work is needed to understand the impacts of generative AI on professional artists' workplaces and careers. In this paper, we conduct a survey ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04552" class="paper-title" target="_blank" rel="noopener noreferrer">Beyond the Interface: Redefining UX for Society-in-the-Loop AI Systems</a>
-<p class="abstract">arXiv:2603.04552v1 Announce Type: new </p></li>
-</ul>
-Abstract: Artificial intelligence systems increasingly operate in decision-critical environments where probabilistic outputs and Human-in-the-Loop (HITL) interactions reshape user engagement. Traditional user experience (UX) frameworks, designed for determinist...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04613" class="paper-title" target="_blank" rel="noopener noreferrer">Beyond Anthropomorphism: a Spectrum of Interface Metaphors for LLMs</a>
-<p class="abstract">arXiv:2603.04613v1 Announce Type: new </p></li>
-</ul>
-Abstract: Anthropomorphizing conversational technology is a natural human tendency. Today, the anthropomorphic metaphor is overly reinforced across intelligent tools. Large Language Models (LLMs) are particularly anthropomorphized through interface design. Whil...
-
-
-<h3>arXiv Social & Information Networks</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05222" class="paper-title" target="_blank" rel="noopener noreferrer">Cognitive Warfare: Definition, Framework, and Case Study</a>
-<p class="abstract">arXiv:2603.05222v1 Announce Type: new </p></li>
-</ul>
-Abstract: Cognitive warfare has emerged as a central feature of modern conflict, yet it remains inconsistently defined and difficult to evaluate. Existing approaches often treat cognitive operations as a subset of information operations, limiting the ability to...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04446" class="paper-title" target="_blank" rel="noopener noreferrer">Threadle: A Memory-Efficient Network Storage and Query Engine for Large, Multilayer, and Mixed-mode Networks</a>
-<p class="abstract">arXiv:2603.04446v1 Announce Type: cross </p></li>
-</ul>
-Abstract: We present Threadle, an open-source, high-performance, and memory-efficient network storage and query engine written in C#. Designed for working with full-population networks derived from administrative register data, which represent very large, mul...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05367" class="paper-title" target="_blank" rel="noopener noreferrer">Shock Propagation and Macroeconomic Fluctuations</a>
-<p class="abstract">arXiv:2603.05367v1 Announce Type: cross </p></li>
-</ul>
-Abstract: We study how idiosyncratic firm-level shocks generate aggregate volatility and tail risk when they propagate through a production network under overlapping adjustment: new productivity draws arrive before the economy reaches the static equilibrium a...
-
-
-<h3>arXiv Computers & Society</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04555" class="paper-title" target="_blank" rel="noopener noreferrer">Token Taxes: mitigating AGI's economic risks</a>
-<p class="abstract">arXiv:2603.04555v1 Announce Type: new </p></li>
-</ul>
-Abstract: The development of AGI threatens to erode government tax bases, lower living standards, and disempower citizens -- risks that make the 40-year stagnation of wages during the first industrial revolution look mild in comparison. While AI safety research...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04607" class="paper-title" target="_blank" rel="noopener noreferrer">A Case Study in Responsible AI-Assisted Video Solutions: Multi-Metric Behavioral Insights in a Public Market Setting</a>
-<p class="abstract">arXiv:2603.04607v1 Announce Type: new </p></li>
-</ul>
-Abstract: Despite recent advances in Computer Vision and Artificial Intelligence (AI), AI-assisted video solutions have struggled to penetrate real-world urban environments due to significant concerns regarding privacy, ethical risks, and technical challenges l...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04701" class="paper-title" target="_blank" rel="noopener noreferrer">Analysis of Terms of Service on Social Media Platforms: Consent Challenges and Assessment Metrics</a>
-<p class="abstract">arXiv:2603.04701v1 Announce Type: new </p></li>
-</ul>
-Abstract: Social media platforms typically obtain user consent through Terms of Service (ToS) presented at account creation, rather than through dedicated consent forms. This study investigates whether consent-related information is clearly communicated within ...
-
-
-<h3>arXiv Graphics</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05079" class="paper-title" target="_blank" rel="noopener noreferrer">Beyond Positional Encoding: A 5D Spatio-Directional Hash Encoding</a>
-<p class="abstract">arXiv:2603.05079v1 Announce Type: new </p></li>
-</ul>
-Abstract: In this work, we propose a new spatio-directional neural encoding that is compact and efficient, and supports all-frequency signals in both space and direction. Current learnable encodings focus on Cartesian orthonormal spaces, which have been shown t...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04847" class="paper-title" target="_blank" rel="noopener noreferrer">GloSplat: Joint Pose-Appearance Optimization for Faster and More Accurate 3D Reconstruction</a>
-<p class="abstract">arXiv:2603.04847v1 Announce Type: cross </p></li>
-</ul>
-Abstract: Feature extraction, matching, structure from motion (SfM), and novel view synthesis (NVS) have traditionally been treated as separate problems with independent optimization objectives. We present GloSplat, a framework that performs \emph{joint pose-...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04958" class="paper-title" target="_blank" rel="noopener noreferrer">Revisiting an Old Perspective Projection for Monocular 3D Morphable Models Regression</a>
-<p class="abstract">arXiv:2603.04958v1 Announce Type: cross </p></li>
-</ul>
-Abstract: We introduce a novel camera model for monocular 3D Morphable Model (3DMM) regression methods that effectively captures the perspective distortion effect commonly seen in close-up facial images.
-  Fitting 3D morphable models to video is a key techniq...
-
-
-<h3>arXiv Systems & Control</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04603" class="paper-title" target="_blank" rel="noopener noreferrer">Risk-Aware Rulebooks for Multi-Objective Trajectory Evaluation under Uncertainty</a>
-<p class="abstract">arXiv:2603.04603v1 Announce Type: new </p></li>
-</ul>
-Abstract: We present a risk-aware formalism for evaluating system trajectories in the presence of uncertain interactions between the system and its environment. The proposed formalism supports reasoning under uncertainty and systematically handles complex relat...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04626" class="paper-title" target="_blank" rel="noopener noreferrer">Joint Visible Light and RF Backscatter Communications for Ambient IoT Network: Fundamentals, Applications, and Opportunities</a>
-<p class="abstract">arXiv:2603.04626v1 Announce Type: new </p></li>
-</ul>
-Abstract: The rapid growth of the Internet of Things (IoT) devices in the sixth-generation (6G) wireless networks raises significant generality and scalability challenges due to energy consumption, deployment complexity, and environmental impact. Ambient IoT (A...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04661" class="paper-title" target="_blank" rel="noopener noreferrer">On boundedness of solutions of three-state Moore-Greitzer compressor model with nonlinear proportional-integral controller for the surge subsystem</a>
-<p class="abstract">arXiv:2603.04661v1 Announce Type: new </p></li>
-</ul>
-Abstract: The work focuses on Lagrange stability of the origin for the three-state Moore-Greitzer compressor model in closed loop with a nonlinear PI controller, tuned only to stabilize a lower-dimensional invariant surge-dynamics subsystem.The linearization of...
-
-
-<h3>arXiv Multimedia</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.05275" class="paper-title" target="_blank" rel="noopener noreferrer">SarcasmMiner: A Dual-Track Post-Training Framework for Robust Audio-Visual Sarcasm Reasoning</a>
-<p class="abstract">arXiv:2603.05275v1 Announce Type: new </p></li>
-</ul>
-Abstract: Multimodal sarcasm detection requires resolving pragmatic incongruity across textual, acoustic, and visual cues through cross-modal reasoning. To enable robust sarcasm reasoning with foundation models, we propose SarcasmMiner, a reinforcement learning...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04696" class="paper-title" target="_blank" rel="noopener noreferrer">When Denoising Becomes Unsigning: Theoretical and Empirical Analysis of Watermark Fragility Under Diffusion-Based Image Editing</a>
-<p class="abstract">arXiv:2603.04696v1 Announce Type: cross </p></li>
-</ul>
-Abstract: Robust invisible watermarking systems aim to embed imperceptible payloads that remain decodable after common post-processing such as JPEG compression, cropping, and additive noise. In parallel, diffusion-based image editing has rapidly matured into ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04882" class="paper-title" target="_blank" rel="noopener noreferrer">DeformTrace: A Deformable State Space Model with Relay Tokens for Temporal Forgery Localization</a>
-<p class="abstract">arXiv:2603.04882v1 Announce Type: cross </p></li>
-</ul>
-Abstract: Temporal Forgery Localization (TFL) aims to precisely identify manipulated segments in video and audio, offering strong interpretability for security and forensics. While recent State Space Models (SSMs) show promise in precise temporal reasoning, t...
-
-
-<hr>
-
-<h2>🧬 学术期刊</h2>
-
-
-<h3>Nature - Latest Research</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.nature.com/articles/d41586-026-00759-7" class="paper-title" target="_blank" rel="noopener noreferrer">Briefing chat: What Galileo’s scribbled margin notes reveal about his scientific journey</a>
-<p class="abstract"><p>Nature, Published online: 06 March 2026; <a href="https://www.nature.com/articles/d41586-026-00759-7">doi:10.1038/d41586-026-00759-7</a></p>Nature staff discuss some of the week’s top science news....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.nature.com/articles/d41586-026-00670-1" class="paper-title" target="_blank" rel="noopener noreferrer">Electric-vehicle batteries toughen up to beat the heat</a>
-<p class="abstract"><p>Nature, Published online: 06 March 2026; <a href="https://www.nature.com/articles/d41586-026-00670-1">doi:10.1038/d41586-026-00670-1</a></p>Rising temperatures shorten battery life, but devices are improving fast enough to resist the ravages of climate change....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.nature.com/articles/d41586-026-00668-9" class="paper-title" target="_blank" rel="noopener noreferrer">Peanut-processing microbes ward off dangerous allergic shock</a>
-<p class="abstract"><p>Nature, Published online: 06 March 2026; <a href="https://www.nature.com/articles/d41586-026-00668-9">doi:10.1038/d41586-026-00668-9</a></p>Scientists identify bacteria that digest allergy-triggering compounds in peanuts, which can be life-threatening to those with allergies....</p></li>
-</ul>
-
-
-<h3>Science - Latest News</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.science.org/content/article/can-wealthy-family-change-course-deadly-brain-disease" class="paper-title" target="_blank" rel="noopener noreferrer">Can a wealthy family change the course of a deadly brain disease?</a>
-<p class="abstract">Inspired by the loss of their mother, they have poured millions into studying a key protein behind frontotemporal dementia. But all has not gone according to plan...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.science.org/content/article/new-hiv-cure-approach-forces-hidden-virus-tripping-immune-sensor" class="paper-title" target="_blank" rel="noopener noreferrer">New HIV cure approach forces hidden virus into tripping immune sensor</a>
-<p class="abstract">Strategy gains momentum after promising results in cell studies and infected people...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.science.org/content/article/nih-reneges-recognizing-union-early-career-researchers" class="paper-title" target="_blank" rel="noopener noreferrer">NIH reneges on recognizing union for early career researchers</a>
-<p class="abstract">The biomedical research agency says trainees in its labs are not “employees”...</p></li>
-</ul>
-
-
-<hr>
-
-<h2>🤖 机器人领域</h2>
-
-
-<h3>arXiv Robotics</h3>
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04463" class="paper-title" target="_blank" rel="noopener noreferrer">GAIDE: Graph-based Attention Masking for Spatial- and Embodiment-aware Motion Planning</a>
-<p class="abstract">arXiv:2603.04463v1 Announce Type: new </p></li>
-</ul>
-Abstract: Sampling-based motion planning algorithms are widely used for motion planning of robotic manipulators, but they often struggle with sample inefficiency in high-dimensional configuration spaces due to their reliance on uniform or hand-crafted informed ...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04466" class="paper-title" target="_blank" rel="noopener noreferrer">Act-Observe-Rewrite: Multimodal Coding Agents as In-Context Policy Learners for Robot Manipulation</a>
-<p class="abstract">arXiv:2603.04466v1 Announce Type: new </p></li>
-</ul>
-Abstract: Can a multimodal language model learn to manipulate physical objects by reasoning about its own failures-without gradient updates, demonstrations, or reward engineering? We argue the answer is yes, under conditions we characterise precisely. We presen...
-
-<ul class="paper-list">
-<li><a href="https://arxiv.org/abs/2603.04470" class="paper-title" target="_blank" rel="noopener noreferrer">Efficient Autonomous Navigation of a Quadruped Robot in Underground Mines on Edge Hardware</a>
-<p class="abstract">arXiv:2603.04470v1 Announce Type: new </p></li>
-</ul>
-Abstract: Embodied navigation in underground mines faces significant challenges, including narrow passages, uneven terrain, near-total darkness, GPS-denied conditions, and limited communication infrastructure. While recent learning-based approaches rely on GPU-...
-
-
-<h3>Robohub</h3>
-
-<ul class="paper-list">
-<li><a href="https://robohub.org/robot-talk-episode-147-miniature-living-robots-with-maria-guix/" class="paper-title" target="_blank" rel="noopener noreferrer">Robot Talk Episode 147 – Miniature living robots, with Maria Guix</a>
-<p class="abstract">Claire chatted to Maria Guix from the University of Barcelona about combining electronics and biology to create biohybrid robots with emergent properties. Maria Guix is a chemist and nanotechnology researcher in the University of Barcelona’s ChemInFlow lab, developing miniaturised living robots and ...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://robohub.org/developing-an-optical-tactile-sensor-for-tracking-head-motion-during-radiotherapy-an-interview-with-bhoomika-gandhi/" class="paper-title" target="_blank" rel="noopener noreferrer">Developing an optical tactile sensor for tracking head motion during radiotherapy: an interview with Bhoomika Gandhi</a>
-<p class="abstract">Illustration of the radiotherapy room and the occlusion problem faced by ceiling-mounted cameras in this application. What was the topic of your PhD research and why was it an interesting area? My topic of research was developing an optical tactile sensor to track head motion during radiotherapy. I ...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://robohub.org/humanoid-home-robots-are-on-the-market-but-do-we-really-want-them/" class="paper-title" target="_blank" rel="noopener noreferrer">Humanoid home robots are on the market – but do we really want them?</a>
-<p class="abstract">Courtesy of 1X. By Eduardo B. Sandoval, UNSW Sydney Last year, Norwegian-US tech company 1X announced a strange new product: “the world’s first consumer-ready humanoid robot designed to transform life at home”. Standing 168 centimetres tall and weighing in at 30 kilograms, the US$20,000 Neo bot prom...</p></li>
-</ul>
-
-
-<h3>The Robot Report</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/" class="paper-title" target="_blank" rel="noopener noreferrer">Vicarious Surgical faces NYSE delisting again</a>
-<p class="abstract"><p>Vicarious Surgical faces NYSE delisting after its market capitalization fell below the required $15 million threshold.</p></p></li>
-</ul>
-<p>The post <a href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/">Vicarious Surgical faces NYSE delisting again</a> appeared first on <a hre...
-
-<ul class="paper-list">
-<li><a href="https://www.therobotreport.com/11-women-shaping-the-future-of-robotics/" class="paper-title" target="_blank" rel="noopener noreferrer">11 women shaping the future of robotics</a>
-<p class="abstract"><p>The IFR said it hopes the list will give women in the robotics industry more visibility and acknowledgment. </p></p></li>
-</ul>
-<p>The post <a href="https://www.therobotreport.com/11-women-shaping-the-future-of-robotics/">11 women shaping the future of robotics</a> appeared first on <a href="https://www.therobo...
-
-<ul class="paper-list">
-<li><a href="https://www.therobotreport.com/tesollo-techman-robot-unveil-robot-high-mix-low-volume-production/" class="paper-title" target="_blank" rel="noopener noreferrer">Tesollo and Techman Robot unveil robot for high-mix, low-volume production</a>
-<p class="abstract"><p>Tesollo demonstrated its DG-3F-M articulated gripper with Techman's TM5S cobot arm for tasks such as bin picking and assembly.</p></p></li>
-</ul>
-<p>The post <a href="https://www.therobotreport.com/tesollo-techman-robot-unveil-robot-high-mix-low-volume-production/">Tesollo and Techman Robot unveil robot for hig...
-
-
-<h3>Robotics Business Review</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/" class="paper-title" target="_blank" rel="noopener noreferrer">Vicarious Surgical faces NYSE delisting again</a>
-<p class="abstract"><p>Vicarious Surgical faces NYSE delisting after its market capitalization fell below the required $15 million threshold.</p></p></li>
-</ul>
-<p>The post <a href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/">Vicarious Surgical faces NYSE delisting again</a> appeared first on <a hre...
-
-<ul class="paper-list">
-<li><a href="https://www.therobotreport.com/11-women-shaping-the-future-of-robotics/" class="paper-title" target="_blank" rel="noopener noreferrer">11 women shaping the future of robotics</a>
-<p class="abstract"><p>The IFR said it hopes the list will give women in the robotics industry more visibility and acknowledgment. </p></p></li>
-</ul>
-<p>The post <a href="https://www.therobotreport.com/11-women-shaping-the-future-of-robotics/">11 women shaping the future of robotics</a> appeared first on <a href="https://www.therobo...
-
-<ul class="paper-list">
-<li><a href="https://www.therobotreport.com/tesollo-techman-robot-unveil-robot-high-mix-low-volume-production/" class="paper-title" target="_blank" rel="noopener noreferrer">Tesollo and Techman Robot unveil robot for high-mix, low-volume production</a>
-<p class="abstract"><p>Tesollo demonstrated its DG-3F-M articulated gripper with Techman's TM5S cobot arm for tasks such as bin picking and assembly.</p></p></li>
-</ul>
-<p>The post <a href="https://www.therobotreport.com/tesollo-techman-robot-unveil-robot-high-mix-low-volume-production/">Tesollo and Techman Robot unveil robot for hig...
-
-
-<hr>
-
-<h2>🎓 美国常青藤/顶尖高校新闻</h2>
-
-
-<h3>Harvard News</h3>
-
-<ul class="paper-list">
-<li><a href="https://news.harvard.edu/gazette/story/2026/03/thats-a-book/" class="paper-title" target="_blank" rel="noopener noreferrer">That’s a book?</a>
-<p class="abstract">Faculty, staff offer recommendations for side trips off the beaten path...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://news.harvard.edu/gazette/story/2026/03/aging-independently-by-design/" class="paper-title" target="_blank" rel="noopener noreferrer">Aging independently, by design</a>
-<p class="abstract">Most older adults say they want to spend their golden years in their own homes. The reality is more complicated, says urban planning expert....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://news.harvard.edu/gazette/story/2026/03/conan-obrien-85-named-commencement-speaker/" class="paper-title" target="_blank" rel="noopener noreferrer">Conan O’Brien ’85 named Commencement speaker</a>
-<p class="abstract">Comedy legend who once led Lampoon will deliver principal address on May 28...</p></li>
-</ul>
-
-
-<h3>Berkeley News</h3>
-
-<ul class="paper-list">
-<li><a href="https://news.berkeley.edu/2026/03/05/berkeley-voices-s2e5-deworming/" class="paper-title" target="_blank" rel="noopener noreferrer">What do parasitic worms and wages have in common? More than you think</a>
-<p class="abstract"><p>Nearly 30 years of data from a landmark UC Berkeley project in Kenya show that treating children's intestinal parasites does more than improve health — it boosts adult earnings and secures the live...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://news.berkeley.edu/2026/03/05/reprogramming-our-gut-bacteria-could-be-key-to-fighting-disease/" class="paper-title" target="_blank" rel="noopener noreferrer">‘Reprogramming’ our gut bacteria could be key to fighting disease</a>
-<p class="abstract"><p>UC Berkeley’s Carlotta Ronda explains how CRISPR is turning our gut microbes into tiny, health-boosting factories in just 101 seconds.</p></p></li>
-</ul>
-<p>The post <a href="https://news.berkeley.edu/2026/03/05/...
-
-<ul class="paper-list">
-<li><a href="https://news.berkeley.edu/2026/03/04/berkeleys-blue-and-gold-satellites-are-now-flying-through-earths-magnetotail-a-first/" class="paper-title" target="_blank" rel="noopener noreferrer">Berkeley’s Blue and Gold satellites are now flying through Earth’s magnetotail — a first</a>
-<p class="abstract"><p>Launched to Mars in November, NASA’s ESCAPADE probes — operated by UC Berkeley’s Space Sciences Lab — are now testing their instruments in a never-before-visited region of Earth's magnetic field.</...</p></li>
-</ul>
-
-
-<h3>Caltech News</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.caltech.edu/about/news/measuring-local-well-being-from-space" class="paper-title" target="_blank" rel="noopener noreferrer">Measuring Local Well-Being from Space</a>
-<p class="abstract"><p>Since 1990, the United Nations (UN) has used the Human Development Index (HDI) to assess the development of a country using indicators of well-being and quality of life gathered via census data. HD...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.caltech.edu/about/news/gravitational-wave-observatories-release-new-catalog-of-detections" class="paper-title" target="_blank" rel="noopener noreferrer">Gravitational-wave observatories release new catalog of detections</a>
-<p class="abstract"><p>When the densest objects in the universe collide and merge, the violence sets off gravitational waves that reverberate across space and time over hundreds of millions and even billions of years. By...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.caltech.edu/about/news/using-tiny-ripples-at-skin-level-to-monitor-for-possible-health-problems-below" class="paper-title" target="_blank" rel="noopener noreferrer">Using Tiny Ripples at Skin Level to Monitor for Possible Health Problems Below</a>
-<p class="abstract"><p>Caltech scientists have developed a method that detects tiny, imperceptible movements at the surface of objects to reveal details about what lies beneath. By analyzing the physics of waves travelin...</p></li>
-</ul>
-
-
-<hr>
-
-<h2>💵 美国主流财经媒体</h2>
-
-
-<h3>Wall Street Journal</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.wsj.com/articles/wall-street-banks-prepare-to-sell-billions-of-dollars-of-x-loans-c609beb1?mod=pls_whats_news_us_business_f" class="paper-title" target="_blank" rel="noopener noreferrer">Wall Street Banks Prepare to Sell Billions of Dollars of X Loans</a>
-<p class="abstract">Banks are hoping to sell the X debt at around 90 to 95 cents on the dollar....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.wsj.com/articles/canada-to-provide-720-million-to-canada-post-to-avoid-insolvency-at-mail-service-fc09a6b9?mod=pls_whats_news_us_business_f" class="paper-title" target="_blank" rel="noopener noreferrer">Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service</a>
-<p class="abstract">The Canadian government said it would provide extraordinary financing to Canada Post to avoid insolvency at the state-owned mail service....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.wsj.com/articles/amazon-willing-to-discuss-quebec-shutdown-with-canadian-officials-610e5f59?mod=pls_whats_news_us_business_f" class="paper-title" target="_blank" rel="noopener noreferrer">Amazon Willing to Discuss Quebec Shutdown With Canadian Officials</a>
-<p class="abstract">Amazon.com said it is open to talks with officials from the Canadian and Quebec governments about the decision to shut down operations in the country’s French-speaking province, which would lead to 1,...</p></li>
-</ul>
-
-
-<h3>Financial Times</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.ft.com/content/be122b17-e667-478d-be19-89d605e978ea" class="paper-title" target="_blank" rel="noopener noreferrer">Qatar warns war will force Gulf to stop energy exports ‘within days’</a>
-<p class="abstract">Brent crude tops $90 after gas producer says it will take ‘weeks to months’ to restore deliveries...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.ft.com/content/947fc231-7100-4236-8d04-7acca12039fe" class="paper-title" target="_blank" rel="noopener noreferrer">US and Gulf states hold talks with Ukraine over drone detection</a>
-<p class="abstract">Kyiv in contact with Washington and Middle East capitals to see how its systems can be replicated to combat Iranian UAVs...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.ft.com/content/d3e2c2a1-73aa-4952-b1f1-08c87042b507" class="paper-title" target="_blank" rel="noopener noreferrer">Oil surges above $90 a barrel for first time in Iran war</a>
-<p class="abstract">Traders brace for longer conflict and further production shutdowns...</p></li>
-</ul>
-
-
-<h3>Bloomberg</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.bloomberg.com/news/audio/2026-03-06/bloomberg-intelligence-blackrock-curbs-withdrawls-podcast" class="paper-title" target="_blank" rel="noopener noreferrer">Bloomberg Intelligence: BlackRock Curbs Withdrawls (Podcast)</a>
-<p class="abstract">Source: Bloomberg, 0:00...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.bloomberg.com/news/audio/2026-03-06/trump-demands-iran-surrender-oil-jumps-jobs-sink-stocks-slide" class="paper-title" target="_blank" rel="noopener noreferrer">Trump Demands Iran Surrender, Oil Jumps, Jobs Sink, Stocks Slide</a>
-<p class="abstract">Source: Bloomberg, 5:48...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.bloomberg.com/news/newsletters/2026-03-06/-final-fantasy-vii-remake-director-teases-the-trilogy-s-finale" class="paper-title" target="_blank" rel="noopener noreferrer">‘Final Fantasy VII Remake’ Director Teases the Trilogy’s Finale</a>
-<p class="abstract">“I’m hoping it’s not going to be too far in the future,” Naoki Hamaguchi tells us...</p></li>
-</ul>
-
-
-<hr>
-
-<h2>🇬🇧 英国主流媒体</h2>
-
-
-<h3>BBC News</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.bbc.com/news/articles/cy031ylgepro?at_medium=RSS&at_campaign=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Oil price at two-year high after Qatar warns all Gulf production could stop within days</a>
-<p class="abstract">Energy Minister Saad al-Kaabi says oil could hit $150 a barrel if the Iran conflict continues over the coming weeks....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.bbc.com/news/articles/cpw004xqxnjo?at_medium=RSS&at_campaign=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Iranian schools, hospital and landmarks among civilian sites hit during US-Israeli strikes</a>
-<p class="abstract">A local in Tehran tell BBC Verify that the city has been turned into a "ghost town" as residents flee....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.bbc.com/news/articles/crrx1jgr4jjo?at_medium=RSS&at_campaign=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Flight paths squeezed as Iran conflict closes more airspace</a>
-<p class="abstract">A drone attack on Azerbaijan has narrowed choices for airlines scrambling to respond to disruption in the Gulf....</p></li>
-</ul>
-
-
-<h3>The Guardian</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.theguardian.com/us-news/2026/mar/06/virginia-giuffre-memoir-epstein-files-names-ghost-writer-amy-wallace-ntwnfb" class="paper-title" target="_blank" rel="noopener noreferrer">Virginia Giuffre’s ‘invisible ghostwriter’ on the Epstein survivor’s legacy: ‘She wanted to name all of them. They deserve to be named’</a>
-<p class="abstract"><p>Amy Wallace spent years helping Giuffre write her life story. Now she reflects on what the survivor would have thought of the release of the Epstein files</p><p>There are many reasons why Amy Walla...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.theguardian.com/commentisfree/2026/mar/06/iran-war-britain-us-israel-keir-starmer-donald-trump-benjamin-netanyahu" class="paper-title" target="_blank" rel="noopener noreferrer">Britain’s war hawks are very upset that Keir Starmer isn’t personally riding a bomb all the way to Tehran | Marina Hyde</a>
-<p class="abstract"><p>Didn’t you know? True British patriots are the ones who want to join an obviously disastrous war on behalf of Israel and Donald Trump</p><p>Have you heard enough pant-wetting about Britain’s “reput...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.theguardian.com/thefilter/2026/mar/06/best-mothers-day-gifts-ideas-2026-uk" class="paper-title" target="_blank" rel="noopener noreferrer">The best Mother’s Day gifts in 2026 for mums, grannies, aunties and friends</a>
-<p class="abstract"><p>Whether it’s merino socks, martini glasses or sustainable wool blankets, we’ve handpicked 82 thoughtful gift ideas to make the mother figure in your life feel truly special</p><p>• <a href="https:/...</p></li>
-</ul>
-
-
-<hr>
-
-<h2>🇫🇷 法国主流媒体</h2>
-
-
-<h3>Le Monde</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.lemonde.fr/international/video/2026/03/06/bombardement-d-une-ecole-en-iran-les-images-revelent-que-des-enfants-ont-ete-tues-lors-d-une-frappe-probablement-americaine_6669826_3210.html" class="paper-title" target="_blank" rel="noopener noreferrer">VIDÉO Ecole bombardée en Iran : les preuves visuelles que des enfants étaient bien parmi les victimes</a>
-<p class="abstract">Les images inédites analysées par « Le Monde » prouvent la présence d’enfants parmi les personnes tuées dans une école de Minab, en Iran, touchée le premier jour du conflit par une « probable » frappe...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.lemonde.fr/international/article/2026/03/06/dans-le-detroit-d-ormuz-le-recit-des-marins-bloques-et-en-danger_6669803_3210.html" class="paper-title" target="_blank" rel="noopener noreferrer">Dans le détroit d’Ormuz, le récit de marins bloqués et en danger</a>
-<p class="abstract">VIDEO Dans le détroit d’Ormuz, récits en images de marins bloqués et en danger...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.lemonde.fr/societe/article/2026/03/06/mort-de-quentin-deranque-mise-en-examen-des-deux-hommes-interpelles-mercredi_6669818_3224.html" class="paper-title" target="_blank" rel="noopener noreferrer">Mort de Quentin Deranque : mise en examen des deux hommes interpellés mercredi</a>
-<p class="abstract">Agés de 22 et 26 ans, ils avaient été arrêtés mercredi matin dans la région lyonnaise et dans l’Aube, deux semaines après une première vague de onze interpellations....</p></li>
-</ul>
-
-
-<h3>France 24</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.france24.com/en/tv-shows/t%C3%AAte-%C3%A0-t%C3%AAte/20260306-there-s-been-a-seismic-shift-in-us-public-opinion-on-palestine-historian-rashid-khalidi" class="paper-title" target="_blank" rel="noopener noreferrer">There's been a 'seismic' shift in US public opinion on Palestine: Historian Rashid Khalidi</a>
-<p class="abstract">In an interview with FRANCE 24, renowned historian Rashid Khalidi described a "seismic, fundamental shift" in American public opinion on the Israeli-Palestinian conflict. He also argued that Israel re...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.france24.com/en/middle-east/20260306-iran-azeris-fear-ethnic-strife-sucking-turkey-and-azerbaijan-into-the-war-middle-east" class="paper-title" target="_blank" rel="noopener noreferrer">Iran's Azeris fear ethnic strife, sucking Turkey and Azerbaijan into the war</a>
-<p class="abstract">With ethnic brethren in northern Iran and a US outreach to Iran’s Kurds following the launch of Operation Epic Fury, Turkey and Azerbaijan are at risk of being drawn into the war. For Iran’s Azeris, t...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.france24.com/en/tv-shows/access-asia/20260306-asia-holds-its-breath-as-iran-war-drags-on" class="paper-title" target="_blank" rel="noopener noreferrer">Asia holds its breath as Iran war drags on</a>
-<p class="abstract">The fallout of the US-Israeli war on Iran is reverberating across Asia. China has condemned the attack and the killing of Iran's supreme leader Ali Khamenei, but is staying well clear of the conflict ...</p></li>
-</ul>
-
-
-<hr>
-
-<h2>🇩🇪 德国主流媒体</h2>
-
-
-<h3>Der Spiegel</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.spiegel.de/international/zeitgeist/reckless-suicidal-race-the-deadly-threat-posed-by-artificial-intelligence-a-8d17183a-90d8-4660-a1bb-d1f1ce560cae#ref=rss" class="paper-title" target="_blank" rel="noopener noreferrer">"Reckless, Suicidal Race": The Deadly Threat Posed by Artificial Intelligence</a>
-<p class="abstract">The rapid rise of artificial intelligence is just as dangerous as the invention of nuclear weapons. AI pioneers are warning that the technology must be brought under control while it's still possible....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.spiegel.de/international/europe/portrait-of-a-city-after-four-years-of-war-the-courage-of-kyiv-a-4799038a-63eb-44e3-9177-73704fd85106#ref=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Portrait of a City after Four Years of War: The Courage of Kyiv</a>
-<p class="abstract">The attacks come at night. But once the sun comes up, daily life continues. After four years of war, the Ukrainian capital of Kyiv remains defiant. Where does the city's strength come from?...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.spiegel.de/international/world/u-s-historian-robert-kagan-we-are-watching-a-country-fall-under-dictatorship-almost-without-resistance-a-d262290b-cca0-4c2f-945d-2ef3b64c574f#ref=rss" class="paper-title" target="_blank" rel="noopener noreferrer">U.S. Historian Robert Kagan: "We Are Watching a Country Fall Under Dictatorship Almost Without Resistance"</a>
-<p class="abstract">The Cold War? Child's play compared to what lies ahead, according to U.S. historian Robert Kagan. Trump, he says, is leading the world into the most dangerous era since 1945....</p></li>
-</ul>
-
-
-<h3>FAZ</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.faz.net/aktuell/finanzen/finanzmarkt/die-wiederholte-geschichte-110849272.html" class="paper-title" target="_blank" rel="noopener noreferrer">Mehr als zwei Euro für Benzin: Die wiederholte Geschichte</a>
-<p class="abstract">Auch vor vier Jahren, mit dem Angriff Russlands auf die Ukraine, stiegen die Benzinpreise in Deutschland auf zwei Euro und mehr. Was ist heute anders, was gleich?...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.faz.net/aktuell/finanzen/sprit-tankstellenbetreiber-kritisieren-mineraloelkonzerne-110849289.html" class="paper-title" target="_blank" rel="noopener noreferrer">Tankstellenbetreiber: „Wir schauen aus dem Fenster und sind selbst überrascht“</a>
-<p class="abstract">Seit Beginn des Irankriegs schießen die Spritpreise in die Höhe. Wie der Tankstellen-Interessenverband das erklärt und wen er dafür verantwortlich macht....</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.faz.net/aktuell/technik-motor/wie-teures-benzin-zu-innovation-fuehren-kann-110849032.html" class="paper-title" target="_blank" rel="noopener noreferrer">Preise treiben Innovation: Billiges Benzin</a>
-<p class="abstract">Angesichts hoher Benzinpreise werden die Rufe nach staatlicher Intervention höher. Doch die könnte Innovation hemmen, zeigt ein Blick in die siebziger Jahre....</p></li>
-</ul>
-
-
-<h3>Deutsche Welle</h3>
-
-<ul class="paper-list">
-<li><a href="https://www.dw.com/en/iceland-to-hold-referendum-on-resuming-eu-membership-bid/a-76253971?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Iceland to hold referendum on resuming EU membership bid</a>
-<p class="abstract">Iceland's government has said a vote on resuming accession talks with the EU will be held in August. Iceland withdrew from talks in 2013 — but rising costs, the war in Ukraine and US imperialism have ...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.dw.com/en/where-does-europe-stand-on-the-us-israel-war-with-iran/a-76247729?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Where does Europe stand on the US-Israel war with Iran?</a>
-<p class="abstract">As the US-Israel war with Iran intensifies, Europe is under growing scrutiny. What potential threats does it face and what is driving the bloc's strategy?...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://www.dw.com/en/eu-suspends-visa-free-travel-for-georgian-officials/a-76252656?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">EU suspends visa-free travel for Georgian officials</a>
-<p class="abstract">Georgian diplomats, government officials, and ministers have lost their visa-free travel privileges in all EU countries — a move that Brussels has taken in response to democratic backsliding in the co...</p></li>
-</ul>
-
-
-<hr>
-
-<em>报告生成时间: 2026-03-07 03:05</em>  
-<em>共收录 51 个 RSS 源</em>
+        <div class="content">
+
+<h1 id="全球学术与媒体日报---2026年03月07日">📚 全球学术与媒体日报 -
+2026年03月07日</h1>
+<blockquote>
+<p>自动生成的每日综合报告 数据来源: arXiv + Nature + Science +
+全球顶尖高校 + 美英德法主流媒体</p>
+</blockquote>
+<hr />
+<h2 id="ai-论文-arxiv">🤖 AI 论文 (arXiv)</h2>
+<h3 id="arxiv-ai">arXiv AI</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04448">SkillNet: Create,
+Evaluate, and Connect AI Skills</a> &gt; arXiv:2603.04448v1 Announce
+Type: new Abstract: Current AI agents can flexibly invoke tools and
+execute complex tasks, yet their long-term advancement is hindered by
+the lack of systematic accumulation and transfer of skills. Without a
+unified mechanism for skill consolidation, agents frequently
+``…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04457">Capability Thresholds
+and Manufacturing Topology: How Embodied Intelligence Triggers Phase
+Transitions in Economic Geography</a> &gt; arXiv:2603.04457v1 Announce
+Type: new Abstract: The fundamental topology of manufacturing has not
+undergone a paradigm-level transformation since Henry Ford’s moving
+assembly line in 1913. Every major innovation of the past century, from
+the Toyota Production System to Industry 4.0, has optimized w…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04514">Progressive Refinement
+Regulation for Accelerating Diffusion Language Model Decoding</a> &gt;
+arXiv:2603.04514v1 Announce Type: new Abstract: Diffusion language
+models generate text through iterative denoising under a uniform
+refinement rule applied to all tokens. However, tokens stabilize at
+different rates in practice, leading to substantial redundant refinement
+and motivating refinement …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04528">Discovering
+mathematical concepts through a multi-agent system</a> &gt;
+arXiv:2603.04528v1 Announce Type: new Abstract: Mathematical concepts
+emerge through an interplay of processes, including experimentation,
+efforts at proof, and counterexamples. In this paper, we present a new
+multi-agent model for computational mathematical discovery based on this
+observation. Our…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04549">Adaptive Memory
+Admission Control for LLM Agents</a> &gt; arXiv:2603.04549v1 Announce
+Type: new Abstract: LLM-based agents increasingly rely on long-term
+memory to support multi-session reasoning and interaction, yet current
+systems provide little control over what information is retained. In
+practice, agents either accumulate large volumes of
+conversatio…</p></li>
+</ol>
+<h3 id="arxiv-machine-learning">arXiv Machine Learning</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04418">Decorrelating the
+Future: Joint Frequency Domain Learning for Spatio-temporal
+Forecasting</a> &gt; arXiv:2603.04418v1 Announce Type: new Abstract:
+Standard direct forecasting models typically rely on point-wise
+objectives such as Mean Squared Error, which fail to capture the complex
+spatio-temporal dependencies inherent in graph-structured signals. While
+recent frequency-domain approaches such a…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04420">Machine Learning for
+Complex Systems Dynamics: Detecting Bifurcations in Dynamical Systems
+with Deep Neural Networks</a> &gt; arXiv:2603.04420v1 Announce Type: new
+Abstract: Critical transitions are the abrupt shifts between
+qualitatively different states of a system, and they are crucial to
+understanding tipping points in complex dynamical systems across
+ecology, climate science, and biology. Detecting these shifts
+typic…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04422">FedEMA-Distill:
+Exponential Moving Average Guided Knowledge Distillation for Robust
+Federated Learning</a> &gt; arXiv:2603.04422v1 Announce Type: new
+Abstract: Federated learning (FL) often degrades when clients hold
+heterogeneous non-Independent and Identically Distributed (non-IID) data
+and when some clients behave adversarially, leading to client drift,
+slow convergence, and high communication overhead. T…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04426">Delta-Crosscoder:
+Robust Crosscoder Model Diffing in Narrow Fine-Tuning Regimes</a> &gt;
+arXiv:2603.04426v1 Announce Type: new Abstract: Model diffing methods
+aim to identify how fine-tuning changes a model’s internal
+representations. Crosscoders approach this by learning shared
+dictionaries of interpretable latent directions between base and
+fine-tuned models. However, existing formul…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04427">Thin Keys, Full
+Values: Reducing KV Cache via Low-Dimensional Attention Selection</a>
+&gt; arXiv:2603.04427v1 Announce Type: new Abstract: Standard
+transformer attention uses identical dimensionality for queries, keys,
+and values (<span class="math inline">$d_q = d_k = d_v =
+\dmodel$</span>). Our insight is that these components serve
+fundamentally different roles, and this symmetry is unnecessary. Queries
+and keys prod…</p></li>
+</ol>
+<h3 id="arxiv-computer-vision">arXiv Computer Vision</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04405">Lost in Translation:
+How Language Re-Aligns Vision for Cross-Species Pathology</a> &gt;
+arXiv:2603.04405v1 Announce Type: new Abstract: Foundation models are
+increasingly applied to computational pathology, yet their behavior
+under cross-cancer and cross-species transfer remains unspecified. This
+study investigated how fine-tuning CPath-CLIP affects cancer detection
+under same-cancer,…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04509">Recognition of Daily
+Activities through Multi-Modal Deep Learning: A Video, Pose, and
+Object-Aware Approach for Ambient Assisted Living</a> &gt;
+arXiv:2603.04509v1 Announce Type: new Abstract: Recognition of daily
+activities is a critical element for effective Ambient Assisted Living
+(AAL) systems, particularly to monitor the well-being and support the
+independence of older adults in indoor environments. However, developing
+robust activity …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04538">InverseNet:
+Benchmarking Operator Mismatch and Calibration Across Compressive
+Imaging Modalities</a> &gt; arXiv:2603.04538v1 Announce Type: new
+Abstract: State-of-the-art EfficientSCI loses 20.58 dB when its assumed
+forward operator deviates from physical reality in just eight
+parameters, yet no existing benchmark quantifies operator mismatch, the
+default condition in deployed compressive imaging syste…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04562">Fusion and Grouping
+Strategies in Deep Learning for Local Climate Zone Classification of
+Multimodal Remote Sensing Data</a> &gt; arXiv:2603.04562v1 Announce
+Type: new Abstract: Local Climate Zones (LCZs) give a zoning map to
+study urban structures and land use and analyze the impact of
+urbanization on local climate. Multimodal remote sensing enables LCZ
+classification, for which data fusion is significant for improving
+accur…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04565">Structure-Guided
+Histopathology Synthesis via Dual-LoRA Diffusion</a> &gt;
+arXiv:2603.04565v1 Announce Type: new Abstract: Histopathology image
+synthesis plays an important role in tissue restoration, data
+augmentation, and modeling of tumor microenvironments. However, existing
+generative methods typically address restoration and generation as
+separate tasks, although bot…</p></li>
+</ol>
+<h3 id="arxiv-nlp">arXiv NLP</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04406">CTRL-RAG: Contrastive
+Likelihood Reward Based Reinforcement Learning for Context-Faithful RAG
+Models</a> &gt; arXiv:2603.04406v1 Announce Type: new Abstract: With the
+growing use of Retrieval-Augmented Generation (RAG), training large
+language models (LLMs) for context-sensitive reasoning and faithfulness
+is increasingly important. Existing RAG-oriented reinforcement learning
+(RL) methods rely on external …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04407">Semantic Containment
+as a Fundamental Property of Emergent Misalignment</a> &gt;
+arXiv:2603.04407v1 Announce Type: new Abstract: Fine-tuning language
+models on narrowly harmful data causes emergent misalignment (EM) –
+behavioral failures extending far beyond training distributions. Recent
+work demonstrates compartmentalization of misalignment behind contextual
+triggers, but th…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04408">Probing Memes in LLMs:
+A Paradigm for the Entangled Evaluation World</a> &gt;
+arXiv:2603.04408v1 Announce Type: new Abstract: Current evaluation
+paradigms for large language models (LLMs) characterize models and
+datasets separately, yielding coarse descriptions: items in datasets are
+treated as pre-labeled entries, and models are summarized by overall
+scores such as accuracy…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04409">Unpacking Human
+Preference for LLMs: Demographically Aware Evaluation with the HUMAINE
+Framework</a> &gt; arXiv:2603.04409v1 Announce Type: new Abstract: The
+evaluation of large language models faces significant challenges.
+Technical benchmarks often lack real-world relevance, while existing
+human preference evaluations suffer from unrepresentative sampling,
+superficial assessment depth, and single-met…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04410">SalamahBench: Toward
+Standardized Safety Evaluation for Arabic Language Models</a> &gt;
+arXiv:2603.04410v1 Announce Type: new Abstract: Safety alignment in
+Language Models (LMs) is fundamental for trustworthy AI. However, while
+different stakeholders are trying to leverage Arabic Language Models
+(ALMs), systematic safety evaluation of ALMs remains largely
+underexplored, limiting their…</p></li>
+</ol>
+<h3 id="arxiv-robotics">arXiv Robotics</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04463">GAIDE: Graph-based
+Attention Masking for Spatial- and Embodiment-aware Motion Planning</a>
+&gt; arXiv:2603.04463v1 Announce Type: new Abstract: Sampling-based
+motion planning algorithms are widely used for motion planning of
+robotic manipulators, but they often struggle with sample inefficiency
+in high-dimensional configuration spaces due to their reliance on
+uniform or hand-crafted informed …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04466">Act-Observe-Rewrite:
+Multimodal Coding Agents as In-Context Policy Learners for Robot
+Manipulation</a> &gt; arXiv:2603.04466v1 Announce Type: new Abstract:
+Can a multimodal language model learn to manipulate physical objects by
+reasoning about its own failures-without gradient updates,
+demonstrations, or reward engineering? We argue the answer is yes, under
+conditions we characterise precisely. We presen…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04470">Efficient Autonomous
+Navigation of a Quadruped Robot in Underground Mines on Edge
+Hardware</a> &gt; arXiv:2603.04470v1 Announce Type: new Abstract:
+Embodied navigation in underground mines faces significant challenges,
+including narrow passages, uneven terrain, near-total darkness,
+GPS-denied conditions, and limited communication infrastructure. While
+recent learning-based approaches rely on GPU-…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04531">PTLD: Sim-to-real
+Privileged Tactile Latent Distillation for Dexterous Manipulation</a>
+&gt; arXiv:2603.04531v1 Announce Type: new Abstract: Tactile dexterous
+manipulation is essential to automating complex household tasks, yet
+learning effective control policies remains a challenge. While recent
+work has relied on imitation learning, obtaining high quality
+demonstrations for multi-fingere…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04547">Many-RRT*: Robust
+Joint-Space Trajectory Planning for Serial Manipulators</a> &gt;
+arXiv:2603.04547v1 Announce Type: new Abstract: The rapid advancement of
+high degree-of-freedom (DoF) serial manipulators necessitates the use of
+swift, sampling-based motion planners for high-dimensional spaces. While
+sampling-based planners like the Rapidly-Exploring Random Tree (RRT) are
+widely …</p></li>
+</ol>
+<h3 id="arxiv-multi-agent-systems">arXiv Multi-Agent Systems</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04474">From Spark to Fire:
+Modeling and Mitigating Error Cascades in LLM-Based Multi-Agent
+Collaboration</a> &gt; arXiv:2603.04474v1 Announce Type: new Abstract:
+Large Language Model-based Multi-Agent Systems (LLM-MAS) are
+increasingly applied to complex collaborative scenarios. However, their
+collaborative mechanisms may cause minor inaccuracies to gradually
+solidify into system-level false consensus through …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04628">Strategic Interactions
+in Multi-Level Stackelberg Games with Non-Follower Agents and
+Heterogeneous Leaders</a> &gt; arXiv:2603.04628v1 Announce Type: new
+Abstract: Strategic interaction in congested systems is commonly
+modelled using Stackelberg games, where competing leaders anticipate the
+behaviour of self-interested followers. A key limitation of existing
+models is that they typically ignore agents who do not…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04833">SCoUT: Scalable
+Communication via Utility-Guided Temporal Grouping in Multi-Agent
+Reinforcement Learning</a> &gt; arXiv:2603.04833v1 Announce Type: new
+Abstract: Communication can improve coordination in partially observed
+multi-agent reinforcement learning (MARL), but learning and to
+communicate with requires choosing among many possible sender-recipient
+pairs, and the effect of any sin…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.03848">Dual-Interaction-Aware
+Cooperative Control Strategy for Alleviating Mixed Traffic
+Congestion</a> &gt; arXiv:2603.03848v1 Announce Type: cross Abstract: As
+Intelligent Transportation System (ITS) develops, Connected and
+Automated Vehicles (CAVs) are expected to significantly reduce traffic
+congestion through cooperative strategies, such as in bottleneck areas.
+However, the uncertainty and diversity …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04421">Do Mixed-Vendor
+Multi-Agent LLMs Improve Clinical Diagnosis?</a> &gt; arXiv:2603.04421v1
+Announce Type: cross Abstract: Multi-agent large language model (LLM)
+systems have emerged as a promising approach for clinical diagnosis,
+leveraging collaboration among agents to refine medical reasoning.
+However, most existing frameworks rely on single-vendor teams (e.g.,
+multi…</p></li>
+</ol>
+<h3 id="arxiv-neural-networks">arXiv Neural Networks</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2112.13243">Motion Illusions
+Generated Using Predictive Neural Networks Also Fool Humans</a> &gt;
+arXiv:2112.13243v2 Announce Type: replace Abstract: Why do we sometimes
+perceive static images as if they were moving? Visual motion illusions
+enjoy a sustained popularity, yet there is no definitive answer to the
+question of why they work. Here we present evidence in favor of the
+hypothesis that i…</p></li>
+<li><p><a href="https://arxiv.org/abs/2601.01832">Yukthi Opus: A
+Multi-Chain Hybrid Metaheuristic for Large-Scale NP-Hard
+Optimization</a> &gt; arXiv:2601.01832v3 Announce Type: replace
+Abstract: We present Yukthi Opus (YO), a multi-chain hybrid
+metaheuristic designed for NP-hard optimization under explicit
+evaluation budget constraints. YO integrates three complementary
+mechanisms in a structured two-phase architecture: Markov Chain
+Monte…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.03201">A Dynamical Theory of
+Sequential Retrieval in Input-Driven Hopfield Networks</a> &gt;
+arXiv:2603.03201v2 Announce Type: replace Abstract: Reasoning is the
+ability to integrate internal states and external inputs in a meaningful
+and semantically consistent flow. Contemporary machine learning (ML)
+systems increasingly rely on such sequential reasoning, from language
+understanding to m…</p></li>
+<li><p><a href="https://arxiv.org/abs/2510.22503">LLEMA: Evolutionary
+Search with LLMs for Multi-Objective Materials Discovery</a> &gt;
+arXiv:2510.22503v2 Announce Type: replace-cross Abstract: Materials
+discovery requires navigating vast chemical and structural spaces while
+satisfying multiple, often conflicting, objectives. We present
+LLM-guided Evolution for MAterials discovery (LLEMA), a unified
+framework that couples the scien…</p></li>
+</ol>
+<h3 id="arxiv-information-retrieval">arXiv Information Retrieval</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04402">SearchGym: A Modular
+Infrastructure for Cross-Platform Benchmarking and Hybrid Search
+Orchestration</a> &gt; arXiv:2603.04402v1 Announce Type: new Abstract:
+The rapid growth of Retrieval-Augmented Generation (RAG) has created a
+proliferation of toolkits, yet a fundamental gap remains between
+experimental prototypes and robust, production-ready systems. We present
+SearchGym, a modular infrastructure design…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04403">FinRetrieval: A
+Benchmark for Financial Data Retrieval by AI Agents</a> &gt;
+arXiv:2603.04403v1 Announce Type: new Abstract: AI agents increasingly
+assist with financial research, yet no benchmark evaluates their ability
+to retrieve specific numeric values from structured databases. We
+introduce FinRetrieval, a benchmark of 500 financial retrieval questions
+with ground trut…</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04404">Signal in the Noise:
+Decoding the Reality of Airline Service Quality with Large Language
+Models</a> &gt; arXiv:2603.04404v1 Announce Type: new Abstract:
+Traditional service quality metrics often fail to capture the nuanced
+drivers of passenger satisfaction hidden within unstructured online
+feedback. This study validates a Large Language Model (LLM) framework
+designed to extract granular insights from …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04532">Still Fresh?
+Evaluating Temporal Drift in Retrieval Benchmarks</a> &gt;
+arXiv:2603.04532v1 Announce Type: new Abstract: Information retrieval
+(IR) benchmarks typically follow the Cranfield paradigm, relying on
+static and predefined corpora. However, temporal changes in technical
+corpora, such as API deprecations and code reorganizations, can render
+existing benchmarks …</p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04743">DARE: Aligning LLM
+Agents with the R Statistical Ecosystem via Distribution-Aware
+Retrieval</a> &gt; arXiv:2603.04743v1 Announce Type: new Abstract: Large
+Language Model (LLM) agents can automate data-science workflows, but
+many rigorous statistical methods implemented in R remain underused
+because LLMs struggle with statistical knowledge and tool retrieval.
+Existing retrieval-augmented approaches…</p></li>
+</ol>
+<hr />
+<h2 id="理论数学类">🧮 理论数学类</h2>
+<h3 id="arxiv-data-structures-algorithms">arXiv Data Structures &amp;
+Algorithms</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04689">Generalizing Fair
+Top-<span class="math inline"><em>k</em></span> Selection: An
+Integrative Approach</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.05482">Finding Short Paths on
+Simple Polytopes</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04635">Optimal
+Prediction-Augmented Algorithms for Testing Independence of
+Distributions</a></p></li>
+</ol>
+<h3 id="arxiv-computational-complexity">arXiv Computational
+Complexity</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.05054">Attacking the
+Polynomials in the Maze of Finite Fields problem</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.05140">Recurrent Graph Neural
+Networks and Arithmetic Circuits</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04689">Generalizing Fair
+Top-<span class="math inline"><em>k</em></span> Selection: An
+Integrative Approach</a></p></li>
+</ol>
+<h3 id="arxiv-computational-geometry">arXiv Computational Geometry</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04665">Hypercube drawings
+with no long plane paths</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04812">Quadratic polarity and
+polar Fenchel-Young divergences from the canonical Legendre
+polarity</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04863">An Optimal Algorithm
+for Computing Many Faces in Line Arrangements</a></p></li>
+</ol>
+<h3 id="arxiv-discrete-mathematics">arXiv Discrete Mathematics</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.05007">Positional s-of-k
+games</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.05100">Minimal toughness in
+subclasses of weakly chordal graphs</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.05205">Structural Properties
+of Shortest Flip Sequences Between Plane Spanning Trees</a></p></li>
+</ol>
+<h3 id="arxiv-game-theory">arXiv Game Theory</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.05461">Equilibrium for
+max-plus payoff</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2602.23116">Regularized Online
+RLHF with Generalized Bilinear Preferences</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04455">Large Language Models
+as Bidding Agents in Repeated HetNet Auction</a></p></li>
+</ol>
+<h3 id="arxiv-logic-in-cs">arXiv Logic in CS</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04450">MPBMC: Multi-Property
+Bounded Model Checking with GNN-guided Clustering</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04512">Fusions of
+One-Variable First-Order Modal Logics</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04530">Complete Diagrammatic
+Axiomatisations of Relative Entropy</a></p></li>
+</ol>
+<hr />
+<h2 id="应用交叉类">🌐 应用/交叉类</h2>
+<h3 id="arxiv-human-computer-interaction">arXiv Human-Computer
+Interaction</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04537">How Professional
+Visual Artists are Negotiating Generative AI in the
+Workplace</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04552">Beyond the Interface:
+Redefining UX for Society-in-the-Loop AI Systems</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04613">Beyond
+Anthropomorphism: a Spectrum of Interface Metaphors for
+LLMs</a></p></li>
+</ol>
+<h3 id="arxiv-social-information-networks">arXiv Social &amp;
+Information Networks</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.05222">Cognitive Warfare:
+Definition, Framework, and Case Study</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04446">Threadle: A
+Memory-Efficient Network Storage and Query Engine for Large, Multilayer,
+and Mixed-mode Networks</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.05367">Shock Propagation and
+Macroeconomic Fluctuations</a></p></li>
+</ol>
+<h3 id="arxiv-computers-society">arXiv Computers &amp; Society</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04555">Token Taxes:
+mitigating AGI’s economic risks</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04607">A Case Study in
+Responsible AI-Assisted Video Solutions: Multi-Metric Behavioral
+Insights in a Public Market Setting</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04701">Analysis of Terms of
+Service on Social Media Platforms: Consent Challenges and Assessment
+Metrics</a></p></li>
+</ol>
+<h3 id="arxiv-graphics">arXiv Graphics</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.05079">Beyond Positional
+Encoding: A 5D Spatio-Directional Hash Encoding</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04847">GloSplat: Joint
+Pose-Appearance Optimization for Faster and More Accurate 3D
+Reconstruction</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04958">Revisiting an Old
+Perspective Projection for Monocular 3D Morphable Models
+Regression</a></p></li>
+</ol>
+<h3 id="arxiv-systems-control">arXiv Systems &amp; Control</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04603">Risk-Aware Rulebooks
+for Multi-Objective Trajectory Evaluation under Uncertainty</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04626">Joint Visible Light
+and RF Backscatter Communications for Ambient IoT Network: Fundamentals,
+Applications, and Opportunities</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04661">On boundedness of
+solutions of three-state Moore-Greitzer compressor model with nonlinear
+proportional-integral controller for the surge subsystem</a></p></li>
+</ol>
+<h3 id="arxiv-multimedia">arXiv Multimedia</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.05275">SarcasmMiner: A
+Dual-Track Post-Training Framework for Robust Audio-Visual Sarcasm
+Reasoning</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04696">When Denoising Becomes
+Unsigning: Theoretical and Empirical Analysis of Watermark Fragility
+Under Diffusion-Based Image Editing</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04882">DeformTrace: A
+Deformable State Space Model with Relay Tokens for Temporal Forgery
+Localization</a></p></li>
+</ol>
+<hr />
+<h2 id="学术期刊">🧬 学术期刊</h2>
+<h3 id="nature---latest-research">Nature - Latest Research</h3>
+<ol type="1">
+<li><p><a
+href="https://www.nature.com/articles/d41586-026-00759-7">Briefing chat:
+What Galileo’s scribbled margin notes reveal about his scientific
+journey</a></p></li>
+<li><p><a
+href="https://www.nature.com/articles/d41586-026-00670-1">Electric-vehicle
+batteries toughen up to beat the heat</a></p></li>
+<li><p><a
+href="https://www.nature.com/articles/d41586-026-00668-9">Peanut-processing
+microbes ward off dangerous allergic shock</a></p></li>
+</ol>
+<h3 id="science---latest-news">Science - Latest News</h3>
+<ol type="1">
+<li><p><a
+href="https://www.science.org/content/article/career-effects-preprints-get-mixed-reviews-biomedical-researchers">Career
+effects of preprints get mixed reviews from biomedical
+researchers</a></p></li>
+<li><p><a
+href="https://www.science.org/content/article/can-wealthy-family-change-course-deadly-brain-disease">Can
+a wealthy family change the course of a deadly brain
+disease?</a></p></li>
+<li><p><a
+href="https://www.science.org/content/article/new-hiv-cure-approach-forces-hidden-virus-tripping-immune-sensor">New
+HIV cure approach forces hidden virus into tripping immune
+sensor</a></p></li>
+</ol>
+<hr />
+<h2 id="机器人领域">🤖 机器人领域</h2>
+<h3 id="arxiv-robotics-1">arXiv Robotics</h3>
+<ol type="1">
+<li><p><a href="https://arxiv.org/abs/2603.04463">GAIDE: Graph-based
+Attention Masking for Spatial- and Embodiment-aware Motion
+Planning</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04466">Act-Observe-Rewrite:
+Multimodal Coding Agents as In-Context Policy Learners for Robot
+Manipulation</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2603.04470">Efficient Autonomous
+Navigation of a Quadruped Robot in Underground Mines on Edge
+Hardware</a></p></li>
+</ol>
+<h3 id="robohub">Robohub</h3>
+<ol type="1">
+<li><p><a
+href="https://robohub.org/robot-talk-episode-147-miniature-living-robots-with-maria-guix/">Robot
+Talk Episode 147 – Miniature living robots, with Maria Guix</a></p></li>
+<li><p><a
+href="https://robohub.org/developing-an-optical-tactile-sensor-for-tracking-head-motion-during-radiotherapy-an-interview-with-bhoomika-gandhi/">Developing
+an optical tactile sensor for tracking head motion during radiotherapy:
+an interview with Bhoomika Gandhi</a></p></li>
+<li><p><a
+href="https://robohub.org/humanoid-home-robots-are-on-the-market-but-do-we-really-want-them/">Humanoid
+home robots are on the market – but do we really want them?</a></p></li>
+</ol>
+<h3 id="the-robot-report">The Robot Report</h3>
+<ol type="1">
+<li><p><a
+href="https://www.therobotreport.com/plug-and-play-ai-transforming-robotics-with-modular-skills/">Plug-and-Play
+AI: Transforming robotics with modular skills</a></p></li>
+<li><p><a
+href="https://www.therobotreport.com/simbe-tally-shelf-scanning-robot-achieves-ul-3300-certification/">Simbe
+Tally shelf-scanning robot achieves UL 3300 certification</a></p></li>
+<li><p><a
+href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/">Vicarious
+Surgical faces NYSE delisting again</a></p></li>
+</ol>
+<h3 id="robotics-business-review">Robotics Business Review</h3>
+<ol type="1">
+<li><p><a
+href="https://www.therobotreport.com/plug-and-play-ai-transforming-robotics-with-modular-skills/">Plug-and-Play
+AI: Transforming robotics with modular skills</a></p></li>
+<li><p><a
+href="https://www.therobotreport.com/simbe-tally-shelf-scanning-robot-achieves-ul-3300-certification/">Simbe
+Tally shelf-scanning robot achieves UL 3300 certification</a></p></li>
+<li><p><a
+href="https://www.therobotreport.com/vicarious-surgical-faces-nyse-delisting-again/">Vicarious
+Surgical faces NYSE delisting again</a></p></li>
+</ol>
+<hr />
+<h2 id="美国常青藤顶尖高校新闻">🎓 美国常青藤/顶尖高校新闻</h2>
+<h3 id="harvard-news">Harvard News</h3>
+<ol type="1">
+<li><p><a
+href="https://news.harvard.edu/gazette/story/2026/03/a-moment-of-real-possibility-in-alzheimers-care/">‘A
+moment of real possibility’ in Alzheimer’s care</a> &gt; Experts explain
+how recent findings are demystifying disease that afflicts tens of
+millions worldwide…</p></li>
+<li><p><a
+href="https://news.harvard.edu/gazette/story/2026/03/who-still-goes-to-the-movies/">Who
+still goes to the movies?</a> &gt; For some, ease of streaming can’t
+beat thrill of watching films on the big screen…</p></li>
+<li><p><a
+href="https://news.harvard.edu/gazette/story/2026/03/thats-a-book/">That’s
+a book?</a> &gt; Faculty, staff offer recommendations for side trips off
+the beaten path…</p></li>
+</ol>
+<h3 id="berkeley-news">Berkeley News</h3>
+<ol type="1">
+<li><p><a
+href="https://news.berkeley.edu/2026/03/06/the-diversity-principle-tracking-the-long-history-of-a-powerful-idea/">‘The
+Diversity Principle’: Tracking the long history of a powerful idea</a>
+&gt;</p>
+<p>
+<p>In a new book, UC Berkeley legal scholar David B. Oppenheimer
+unearths the surprising history of diversity in Western thought. While
+high-level critics are trying to bury the idea, he says,
+researc…</p></li>
+<li><p><a
+href="https://news.berkeley.edu/2026/03/06/nobel-laureate-omar-yaghi/">Nobel
+laureate Omar Yaghi on turning air into water for all</a> &gt;</p>
+<p>
+<p>The UC Berkeley chemist recounts his journey as a young immigrant
+from Amman, Jordan, and the productive “failures” that led to the
+development of a technology that harvests clean water from the
+dr…</p></li>
+<li><p><a
+href="https://news.berkeley.edu/2026/03/06/sprawling-new-painting-commemorates-150-years-of-women-at-uc-berkeley/">Sprawling
+new painting commemorates 150 years of women at UC Berkeley</a> &gt;</p>
+<p>
+<p>The mural in the new Undergraduate Academic Building in the heart of
+campus pays tribute to 41 women and the ways their contributions have
+echoed through time.</p>
+</p>
+<p>
+<p>The post &lt;a href=“https://new…</p></li>
+</ol>
+<h3 id="caltech-news">Caltech News</h3>
+<ol type="1">
+<li><p><a
+href="https://www.caltech.edu/about/news/measuring-local-well-being-from-space">Measuring
+Local Well-Being from Space</a> &gt;</p>
+<p>
+<p>Since 1990, the United Nations (UN) has used the Human Development
+Index (HDI) to assess the development of a country using indicators of
+well-being and quality of life gathered via census data. HD…</p></li>
+<li><p><a
+href="https://www.caltech.edu/about/news/gravitational-wave-observatories-release-new-catalog-of-detections">Gravitational-wave
+observatories release new catalog of detections</a> &gt;</p>
+<p>
+<p>When the densest objects in the universe collide and merge, the
+violence sets off gravitational waves that reverberate across space and
+time over hundreds of millions and even billions of years. By…</p></li>
+<li><p><a
+href="https://www.caltech.edu/about/news/using-tiny-ripples-at-skin-level-to-monitor-for-possible-health-problems-below">Using
+Tiny Ripples at Skin Level to Monitor for Possible Health Problems
+Below</a> &gt;</p>
+<p>
+<p>Caltech scientists have developed a method that detects tiny,
+imperceptible movements at the surface of objects to reveal details
+about what lies beneath. By analyzing the physics of waves
+travelin…</p></li>
+</ol>
+<hr />
+<h2 id="美国主流财经媒体">💵 美国主流财经媒体</h2>
+<h3 id="wall-street-journal">Wall Street Journal</h3>
+<ol type="1">
+<li><p><a
+href="https://www.wsj.com/articles/wall-street-banks-prepare-to-sell-billions-of-dollars-of-x-loans-c609beb1?mod=pls_whats_news_us_business_f">Wall
+Street Banks Prepare to Sell Billions of Dollars of X Loans</a> &gt;
+Banks are hoping to sell the X debt at around 90 to 95 cents on the
+dollar….</p></li>
+<li><p><a
+href="https://www.wsj.com/articles/canada-to-provide-720-million-to-canada-post-to-avoid-insolvency-at-mail-service-fc09a6b9?mod=pls_whats_news_us_business_f">Canada
+to Provide $720 Million to Canada Post to Avoid Insolvency at Mail
+Service</a> &gt; The Canadian government said it would provide
+extraordinary financing to Canada Post to avoid insolvency at the
+state-owned mail service….</p></li>
+<li><p><a
+href="https://www.wsj.com/articles/amazon-willing-to-discuss-quebec-shutdown-with-canadian-officials-610e5f59?mod=pls_whats_news_us_business_f">Amazon
+Willing to Discuss Quebec Shutdown With Canadian Officials</a> &gt;
+Amazon.com said it is open to talks with officials from the Canadian and
+Quebec governments about the decision to shut down operations in the
+country’s French-speaking province, which would lead to 1,…</p></li>
+</ol>
+<h3 id="financial-times">Financial Times</h3>
+<ol type="1">
+<li><p><a
+href="https://www.ft.com/content/d3e2c2a1-73aa-4952-b1f1-08c87042b507">Oil
+hits highest level since 2023 as Iran war triggers historic surge</a>
+&gt; Goldman Sachs warns crude will soar past 2008 peak if action is not
+taken to reopen Strait of Hormuz…</p></li>
+<li><p><a
+href="https://www.ft.com/content/bbd79c63-8131-4b20-9d2d-708bc8acea38">Trump
+says no deal with Iran except ‘unconditional surrender’</a> &gt;
+President says US defence groups to boost output of sophisticated
+missiles after meeting CEOs…</p></li>
+<li><p><a
+href="https://www.ft.com/content/19be57d7-6299-4a1d-b761-3d699d07de94">Russia
+is helping Iran to target US military assets in Middle East</a> &gt;
+Tehran using intelligence shared by Moscow to launch retaliatory drone
+and missile attacks…</p></li>
+</ol>
+<h3 id="bloomberg">Bloomberg</h3>
+<ol type="1">
+<li><p><a
+href="https://www.bloomberg.com/news/audio/2026-03-07/us-oil-posts-biggest-weekly-gain-trump-demands-iran-surrender-mmfogov3">US
+Oil Posts Biggest Weekly Gain, Trump Demands Iran Surrender</a> &gt;
+Source: Bloomberg, 6:37…</p></li>
+<li><p><a
+href="https://www.bloomberg.com/news/articles/2026-03-07/trump-fires-dhs-head-kristi-noem-amid-240-million-ad-campaign">The
+$240 Million Ad Campaign That Helped Lead to Kristi Noem’s Firing</a>
+&gt;</p>
+<p>
+<p>On today’s Big Take podcast: an investigation into the Department of
+Homeland Security’s ad blitz.</p>
+</p>
+<p>…</p></li>
+<li><p><a
+href="https://www.bloomberg.com/news/audio/2026-03-07/trump-demands-unconditional-surrender-oil-leaps-more">Trump
+Demands “Unconditional Surrender”, Oil Leaps, More</a> &gt; Source:
+Bloomberg, 6:17…</p></li>
+</ol>
+<hr />
+<h2 id="英国主流媒体">🇬🇧 英国主流媒体</h2>
+<h3 id="bbc-news">BBC News</h3>
+<ol type="1">
+<li><p><a
+href="https://www.bbc.com/news/articles/c2k8339xn9jo?at_medium=RSS&amp;at_campaign=rss">Trump
+wants to pick Iran’s new leader - will a hostile regime under fire
+agree?</a> &gt; The president’s vision of Iran’s future could meet
+fierce opposition, writes chief international correspondent Lyse
+Doucet….</p></li>
+<li><p><a
+href="https://www.bbc.com/news/articles/c75ekve9yq9o?at_medium=RSS&amp;at_campaign=rss">Huge
+US bomber lands at UK air base</a> &gt; The aircraft is the fastest
+bomber in the US Air Force and is piloted by a crew of four….</p></li>
+<li><p><a
+href="https://www.bbc.com/news/articles/cy031ylgepro?at_medium=RSS&amp;at_campaign=rss">Oil
+price at two-year high after Qatar warns all Gulf production could stop
+within days</a> &gt; Energy Minister Saad al-Kaabi says oil could hit
+$150 a barrel if the Iran conflict continues over the coming
+weeks….</p></li>
+</ol>
+<h3 id="the-guardian">The Guardian</h3>
+<ol type="1">
+<li><p><a
+href="https://www.theguardian.com/us-news/2026/mar/06/virginia-giuffre-memoir-epstein-files-names-ghost-writer-amy-wallace-ntwnfb">Virginia
+Giuffre’s ‘invisible ghostwriter’ on the Epstein survivor’s legacy: ‘She
+wanted to name all of them. They deserve to be named’</a> &gt;</p>
+<p>
+<p>Amy Wallace spent years helping Giuffre write her life story. Now she
+reflects on what the survivor would have thought of the release of the
+Epstein files</p>
+</p>
+<p>
+<p>There are many reasons why Amy Walla…</p></li>
+<li><p><a
+href="https://www.theguardian.com/commentisfree/2026/mar/06/iran-war-britain-us-israel-keir-starmer-donald-trump-benjamin-netanyahu">Britain’s
+war hawks are very upset that Keir Starmer isn’t personally riding a
+bomb all the way to Tehran | Marina Hyde</a> &gt;</p>
+<p>
+<p>Didn’t you know? True British patriots are the ones who want to join
+an obviously disastrous war on behalf of Israel and Donald Trump</p>
+</p>
+<p>
+<p>Have you heard enough pant-wetting about Britain’s “reput…</p></li>
+<li><p><a
+href="https://www.theguardian.com/thefilter/2026/mar/06/best-mothers-day-gifts-ideas-2026-uk">The
+best Mother’s Day gifts in 2026 for mums, grannies, aunties and
+friends</a> &gt;</p>
+<p>
+<p>Whether it’s merino socks, martini glasses or sustainable wool
+blankets, we’ve handpicked 82 thoughtful gift ideas to make the mother
+figure in your life feel truly special</p>
+</p>
+<p>
+<p>• &lt;a href=“https:/…</p></li>
+</ol>
+<hr />
+<h2 id="法国主流媒体">🇫🇷 法国主流媒体</h2>
+<h3 id="le-monde">Le Monde</h3>
+<ol type="1">
+<li><p><a
+href="https://www.lemonde.fr/international/live/2026/03/06/en-direct-guerre-au-moyen-orient-emmanuel-macron-condamne-une-attaque-inacceptable-contre-une-position-de-l-onu-au-liban_6668663_3210.html">EN
+DIRECT, guerre au Moyen-Orient : nouvelle série de frappes israéliennes
+sur Téhéran ; Emmanuel Macron condamne une « attaque inacceptable »
+contre une position de l’ONU au Liban</a> &gt; La télévision d’Etat
+iranienne a fait état d’une explosion dans la partie ouest de la
+capitale. Au Liban, alors qu’Israël poursuit ses bombardements dans le
+sud du pays, des casques bleus ghanéens ont…</p></li>
+<li><p><a
+href="https://www.lemonde.fr/politique/article/2026/03/06/dette-fitch-maintient-la-note-de-la-france-a-a_6669836_823448.html">Dette
+: Fitch maintient la note de la France à A+</a> &gt; L’agence américaine
+avait été la première à abaisser en septembre la note accordée à la
+dette française, en raison de l’incertitude politique. Ce vendredi
+6 mars, elle a choisi de ne pas la modifier….</p></li>
+<li><p><a
+href="https://www.lemonde.fr/societe/article/2026/03/06/a-lyon-deux-mises-en-examen-supplementaires-dans-l-affaire-quentin-deranque_6669832_3224.html">Mort
+de Quentin Deranque : à Lyon, deux mises en examen supplémentaires ;
+neuf personnes écrouées au total</a> &gt; Agés de 22 et 26 ans, les deux
+hommes, suspectés d’avoir participé à la rixe après laquelle est mort le
+militant d’extrême droite, ont été placés en détention
+provisoire….</p></li>
+</ol>
+<h3 id="france-24">France 24</h3>
+<ol type="1">
+<li><p><a
+href="https://www.france24.com/en/europe/20260306-zelensky-visits-eastern-front-as-ukraine-and-russia-complete-pow-swap">Zelensky
+visits eastern front as Ukraine and Russia complete POW swap</a> &gt;
+Ukrainian President Volodymyr Zelensky visited frontline troops in
+eastern Ukraine on Friday as Kyiv and Moscow completed a two-day
+prisoner-of-war exchange involving 500 soldiers from each side. The
+…</p></li>
+<li><p><a
+href="https://www.france24.com/en/tv-shows/eye-on-africa/20260306-51-people-have-been-killed-in-the-last-24-hours-in-sudan-s-kordofan-region">51
+people have been killed in the last 24 hours in Sudan’s Kordofan
+region</a> &gt; First, 51 people have been killed in the last 24 hours
+in Sudan’s Kordofan region due to clashes between the army and the
+paramilitary Rapid Support Forces. Also, UN Secretary General Anotnio
+Guterres…</p></li>
+<li><p><a
+href="https://www.france24.com/en/tv-shows/spotlight/20260306-iran-europe-churchill-the-view-from-a-former-british-ambassador-to-iran">Iran,
+Europe &amp; Churchill: The View from a Former British Ambassador to
+Iran</a> &gt; In this edition of the Spotlight, we speak to Richard
+Dalton, the former British ambassador to Iran and Libya and a former
+consul general in Jerusalem, to unpack the first week of war and what
+may com…</p></li>
+</ol>
+<hr />
+<h2 id="德国主流媒体">🇩🇪 德国主流媒体</h2>
+<h3 id="der-spiegel">Der Spiegel</h3>
+<ol type="1">
+<li><p><a
+href="https://www.spiegel.de/international/zeitgeist/reckless-suicidal-race-the-deadly-threat-posed-by-artificial-intelligence-a-8d17183a-90d8-4660-a1bb-d1f1ce560cae#ref=rss">“Reckless,
+Suicidal Race”: The Deadly Threat Posed by Artificial Intelligence</a>
+&gt; The rapid rise of artificial intelligence is just as dangerous as
+the invention of nuclear weapons. AI pioneers are warning that the
+technology must be brought under control while it’s still
+possible….</p></li>
+<li><p><a
+href="https://www.spiegel.de/international/europe/portrait-of-a-city-after-four-years-of-war-the-courage-of-kyiv-a-4799038a-63eb-44e3-9177-73704fd85106#ref=rss">Portrait
+of a City after Four Years of War: The Courage of Kyiv</a> &gt; The
+attacks come at night. But once the sun comes up, daily life continues.
+After four years of war, the Ukrainian capital of Kyiv remains defiant.
+Where does the city’s strength come from?…</p></li>
+<li><p><a
+href="https://www.spiegel.de/international/world/u-s-historian-robert-kagan-we-are-watching-a-country-fall-under-dictatorship-almost-without-resistance-a-d262290b-cca0-4c2f-945d-2ef3b64c574f#ref=rss">U.S.
+Historian Robert Kagan: “We Are Watching a Country Fall Under
+Dictatorship Almost Without Resistance”</a> &gt; The Cold War? Child’s
+play compared to what lies ahead, according to U.S. historian Robert
+Kagan. Trump, he says, is leading the world into the most dangerous era
+since 1945….</p></li>
+</ol>
+<h3 id="faz">FAZ</h3>
+<ol type="1">
+<li><p><a
+href="https://www.faz.net/aktuell/politik/ausland/iran-krieg-warum-das-mullah-regime-nicht-stuerzt-110849019.html">Krieg
+in Nahost: Warum das Mullah-Regime nicht stürzt</a> &gt; Iran hat sich
+seit Jahrzehnten auf den Kriegsfall vorbereitet. Die Strukturen des
+Systems sind dafür geschaffen worden, berichtet Friederike
+Böge…</p></li>
+<li><p><a
+href="https://www.faz.net/aktuell/politik/ausland/aserbaidschan-wirft-iran-angriff-auf-exklave-vor-110849443.html">Aserbaidschan
+und Iran: Ein „gemeiner und ehrloser“ Angriff des Nachbarn</a> &gt; Nach
+einem Drohneneinschlag in Aserbaidschan bedroht Staatschef Alijew
+Teheran. Nur kurz vorher drückte er noch Beileid wegen Khameneis Tod
+aus….</p></li>
+<li><p><a
+href="https://www.faz.net/aktuell/politik/ausland/iran-krieg-warum-trumps-drohnenabwehr-schwaechen-zeigt-110849322.html">Irankrieg:
+Die Schwächen in Amerikas Drohnenabwehr</a> &gt; Die USA haben Probleme
+mit der Abwehr iranischer Drohnen, sechs Soldaten wurden in Kuwait
+getötet. Wie die Ukraine nun helfen will….</p></li>
+</ol>
+<h3 id="deutsche-welle">Deutsche Welle</h3>
+<ol type="1">
+<li><p><a
+href="https://www.dw.com/en/iran-war-israel-launches-broad-scale-strikes-on-tehran/live-76256213?maca=en-rss-en-all-1573-rdf">Iran
+war: Israel launches ‘broad-scale’ strikes on Tehran</a> &gt; Israel is
+launching a fresh wave of attacks on Iran, as the war enters a second
+week. DW has the latest….</p></li>
+<li><p><a
+href="https://www.dw.com/en/nepal-early-vote-returns-suggest-massive-political-shift/a-76255769?maca=en-rss-en-all-1573-rdf">Nepal:
+Early vote returns suggest massive political shift</a> &gt; Voters in
+the Himalayan nation have soured on establishment parties and
+politicians. Early returns hint at a newcomer party taking the reins
+after Gen Z protests demanding change last year….</p></li>
+<li><p><a
+href="https://www.dw.com/en/do-americans-support-trump-s-iran-war/a-76251116?maca=en-rss-en-all-1573-rdf">Do
+Americans support Trump’s Iran war?</a> &gt; US strikes on Iran are
+driving up oil prices and inflation. Does Trump’s MAGA base back this
+war?…</p></li>
+</ol>
+<hr />
+<p><em>报告生成时间: 2026-03-07 10:10</em><br />
+<em>共收录 51 个 RSS 源: 8 AI + 6 理论数学 + 6 应用交叉 + 2 期刊 + 4
+机器人 + 12 高校 + 3 美财经 + 2 英国 + 3 法国 + 5 德国</em></p>
 
         </div>
         
         <footer>
-            <p>PureCut</p>
+            <p>Made with ❤️ by PureCut</p>
+            <p>数据来源: arXiv + Nature + Science + 全球顶尖高校 + 美英德法主流媒体</p>
         </footer>
     </div>
-    
-    <!-- 微信分享优化脚本 -->
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-    <script>
-        // 微信内置浏览器检测
-        var isWeixin = /MicroMessenger/i.test(navigator.userAgent);
-        
-        if (isWeixin) {
-            // 微信环境下强制刷新分享数据
-            document.addEventListener('WeixinJSBridgeReady', function() {
-                WeixinJSBridge.call('hideOptionMenu');
-                WeixinJSBridge.call('showOptionMenu');
-            });
-        }
-        
-        // 通用分享数据更新
-        var shareData = {
-            title: '📚 全球学术与媒体日报',
-            desc: '每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告',
-            link: 'https://rss-seven-kappa-47.vercel.app/',
-            imgUrl: 'https://rss-seven-kappa-47.vercel.app/cover.jpg',
-            success: function() {},
-            cancel: function() {}
-        };
-        
-        // 监听分享事件
-        if (typeof wx !== 'undefined') {
-            wx.ready(function() {
-                wx.onMenuShareTimeline(shareData);
-                wx.onMenuShareAppMessage(shareData);
-                wx.onMenuShareQQ(shareData);
-                wx.onMenuShareWeibo(shareData);
-            });
-        }
-    </script>
 </body>
 </html>
