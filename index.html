@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="referrer" content="no-referrer">
     <title>📚 全球学术与媒体日报 - 2026年03月09日</title>
 
@@ -10,25 +10,25 @@
     <meta property="og:title" content="📚 全球学术与媒体日报">
     <meta property="og:description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://rss.colorfulins.com/">
-    <meta property="og:image" content="https://rss.colorfulins.com/cover.jpg">
+    <meta property="og:url" content="https://rss-seven-kappa-47.vercel.app/">
+    <meta property="og:image" content="https://rss-seven-kappa-47.vercel.app/cover.jpg">
     
     <!-- 微信专用 -->
     <meta name="description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
     <meta itemprop="name" content="📚 全球学术与媒体日报">
     <meta itemprop="description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
-    <meta itemprop="image" content="https://rss.colorfulins.com/cover.jpg">
+    <meta itemprop="image" content="https://rss-seven-kappa-47.vercel.app/cover.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="📚 全球学术与媒体日报">
     <meta name="twitter:description" content="每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告">
-    <meta name="twitter:image" content="https://rss.colorfulins.com/cover.jpg">
+    <meta name="twitter:image" content="https://rss-seven-kappa-47.vercel.app/cover.jpg">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
@@ -101,22 +101,112 @@
             font-size: 0.9em;
             line-height: 1.5;
         }
-        /* 图片响应式 - 确保在各种设备上都能正常显示 */
-        .card img {
+        
+        /* ===== 图片容器和自适应样式 ===== */
+        .img-container {
+            position: relative;
+            width: 100%;
             max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 10px 0;
-            display: block;
+            margin: 12px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        /* 摘要中的图片 */
-        .abstract img {
+        .img-container.img-loaded {
+            background: transparent;
+            min-height: auto;
+        }
+        
+        .img-container.img-error {
+            background: #f0f0f0;
+            min-height: 80px;
+        }
+        
+        .content-img {
+            width: 100%;
             max-width: 100%;
             height: auto;
-            border-radius: 6px;
-            margin: 8px 0;
+            max-height: 400px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
+        
+        .img-container.img-loaded .content-img {
+            opacity: 1;
+        }
+        
+        .img-container.img-error .content-img {
+            display: none;
+        }
+        
+        .img-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+        
+        .img-container.img-loaded .img-placeholder {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .img-container.img-error .img-placeholder {
+            opacity: 0.3;
+            font-size: 1.5em;
+        }
+        
+        /* 摘要中的图片容器 */
+        .abstract .img-container {
+            margin: 8px 0;
+            border-radius: 8px;
+            min-height: 80px;
+        }
+        
+        .abstract .content-img {
+            max-height: 300px;
+            border-radius: 8px;
+        }
+        
+        /* ===== 响应式设计 ===== */
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            header h1 { font-size: 1.8em; }
+            header { padding: 30px 15px; }
+            .card { padding: 20px; border-radius: 12px; }
+            .card h2 { font-size: 1.3em; }
+            .card h3 { font-size: 1.1em; }
+            .paper-list li { padding: 12px 15px; }
+            .content-img { max-height: 300px; }
+            .img-container { min-height: 100px; border-radius: 8px; }
+            .abstract .content-img { max-height: 200px; }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .content-img { max-height: 250px; }
+            .img-container { min-height: 80px; }
+            .abstract { font-size: 0.85em; }
+        }
+        
+        @media (min-width: 1400px) {
+            .container { max-width: 1400px; }
+            .content-img { max-height: 500px; }
+        }
+        
         blockquote {
             border-left: 4px solid #667eea;
             padding-left: 20px;
@@ -135,10 +225,6 @@
             color: rgba(255,255,255,0.8);
             font-size: 0.9em;
         }
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8em; }
-            .card { padding: 20px; }
-        }
     </style>
 </head>
 <body>
@@ -146,7 +232,7 @@
         <header>
             <h1>📚 全球学术与媒体日报</h1>
             <p>自动生成的每日综合报告</p>
-            <div class="update-time">更新时间: 2026年03月09日22:53</div>
+            <div class="update-time">更新时间: 2026年03月09日23:41</div>
         </header>
         
         <div class="card">
@@ -712,17 +798,44 @@ Abstract: Recent multimodal systems often rely on separate expert modality encod
 
 <ul class="paper-list">
 <li><a href="https://robohub.org/robot-talk-episode-147-miniature-living-robots-with-maria-guix/" class="paper-title" target="_blank" rel="noopener noreferrer">Robot Talk Episode 147 – Miniature living robots, with Maria Guix</a>
-<p class="abstract"><img src="https://robohub.org/wp-content/uploads/2026/03/147_Maria-Guix-1-425x425.jpg" class="rss-image" />Claire chatted to Maria Guix from the University of Barcelona about combining electronics and biology to create biohybrid robots with emergent properties. Maria Guix is a chemist and nanotechnology researcher in the University of Barcelona’s ChemInFlow lab, developing miniaturised living robots and ...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://robohub.org/wp-content/uploads/2026/03/147_Maria-Guix-1-425x425.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Claire chatted to Maria Guix from the University of Barcelona about combining electronics and biology to create biohybrid robots with emergent properties. Maria Guix is a chemist and nanotechnology researcher in the University of Barcelona’s ChemInFlow lab, developing miniaturised living robots and ...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://robohub.org/developing-an-optical-tactile-sensor-for-tracking-head-motion-during-radiotherapy-an-interview-with-bhoomika-gandhi/" class="paper-title" target="_blank" rel="noopener noreferrer">Developing an optical tactile sensor for tracking head motion during radiotherapy: an interview with Bhoomika Gandhi</a>
-<p class="abstract"><img src="https://robohub.org/wp-content/uploads/2026/03/occlusion-425x303.png" class="rss-image" />Illustration of the radiotherapy room and the occlusion problem faced by ceiling-mounted cameras in this application. What was the topic of your PhD research and why was it an interesting area? My topic of research was developing an optical tactile sensor to track head motion during radiotherapy. I ...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://robohub.org/wp-content/uploads/2026/03/occlusion-425x303.png" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Illustration of the radiotherapy room and the occlusion problem faced by ceiling-mounted cameras in this application. What was the topic of your PhD research and why was it an interesting area? My topic of research was developing an optical tactile sensor to track head motion during radiotherapy. I ...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://robohub.org/humanoid-home-robots-are-on-the-market-but-do-we-really-want-them/" class="paper-title" target="_blank" rel="noopener noreferrer">Humanoid home robots are on the market – but do we really want them?</a>
-<p class="abstract"><img src="https://robohub.org/wp-content/uploads/2026/03/1X_NEO-Home-Duster-1024x576.jpg" class="rss-image" />Courtesy of 1X. By Eduardo B. Sandoval, UNSW Sydney Last year, Norwegian-US tech company 1X announced a strange new product: “the world’s first consumer-ready humanoid robot designed to transform life at home”. Standing 168 centimetres tall and weighing in at 30 kilograms, the US$20,000 Neo bot prom...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://robohub.org/wp-content/uploads/2026/03/1X_NEO-Home-Duster-1024x576.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Courtesy of 1X. By Eduardo B. Sandoval, UNSW Sydney Last year, Norwegian-US tech company 1X announced a strange new product: “the world’s first consumer-ready humanoid robot designed to transform life at home”. Standing 168 centimetres tall and weighing in at 30 kilograms, the US$20,000 Neo bot prom...</p></li>
 </ul>
 
 
@@ -730,19 +843,46 @@ Abstract: Recent multimodal systems often rely on separate expert modality encod
 
 <ul class="paper-list">
 <li><a href="https://www.therobotreport.com/humanoid-developer-agility-robotics-rebrands/" class="paper-title" target="_blank" rel="noopener noreferrer">Humanoid developer Agility Robotics rebrands</a>
-<p class="abstract"><img src="https://www.therobotreport.com/wp-content/uploads/2026/03/agility-logo.jpg" class="rss-image" />The company said the rebrand reflects its readiness to scale deployments and lead humanoid adoption across new industries.</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://www.therobotreport.com/wp-content/uploads/2026/03/agility-logo.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>The company said the rebrand reflects its readiness to scale deployments and lead humanoid adoption across new industries.</p></li>
 </ul>
 The post Humanoid developer Agility Robotics rebrands appeared first on The Robot Report....
 
 <ul class="paper-list">
 <li><a href="https://www.therobotreport.com/plug-and-play-ai-transforming-robotics-with-modular-skills/" class="paper-title" target="_blank" rel="noopener noreferrer">Plug-and-Play AI: Transforming robotics with modular skills</a>
-<p class="abstract"><img src="https://www.therobotreport.com/wp-content/uploads/2026/03/Dinesh-headshot.jpg" class="rss-image" />Our guest this week is Dinesh Narayanan, Head of Commercialization, General Robotics.</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://www.therobotreport.com/wp-content/uploads/2026/03/Dinesh-headshot.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Our guest this week is Dinesh Narayanan, Head of Commercialization, General Robotics.</p></li>
 </ul>
 The post Plug-and-Play AI: Transforming robotics with modular skills appeared first on The Robot Report....
 
 <ul class="paper-list">
 <li><a href="https://www.therobotreport.com/simbe-tally-shelf-scanning-robot-achieves-ul-3300-certification/" class="paper-title" target="_blank" rel="noopener noreferrer">Simbe Tally shelf-scanning robot achieves UL 3300 certification</a>
-<p class="abstract"><img src="https://www.therobotreport.com/wp-content/uploads/2026/03/Shopper-Tally-Hardware-featured.jpg" class="rss-image" />As part of the UL 3300 evaluation, Tally passed more than 40 safety tests, demonstrating its ability to operate safely in retail settings.</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://www.therobotreport.com/wp-content/uploads/2026/03/Shopper-Tally-Hardware-featured.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>As part of the UL 3300 evaluation, Tally passed more than 40 safety tests, demonstrating its ability to operate safely in retail settings.</p></li>
 </ul>
 The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeared first on The Robot Report....
 
@@ -755,18 +895,45 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 <h3>Harvard News</h3>
 
 <ul class="paper-list">
+<li><a href="https://news.harvard.edu/gazette/story/2026/03/unlocking-hidden-pocket-on-a-billion-dollar-drug-target/" class="paper-title" target="_blank" rel="noopener noreferrer">Unlocking hidden pocket on a billion‑dollar drug target</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://news.harvard.edu/wp-content/uploads/2026/03/012226_ChristinaWoo_207.jpg?w=1488" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Scientists identify path toward making cancer drugs safer and more selective...</p></li>
+</ul>
+
+<ul class="paper-list">
 <li><a href="https://news.harvard.edu/gazette/story/2026/03/a-moment-of-real-possibility-in-alzheimers-care/" class="paper-title" target="_blank" rel="noopener noreferrer">‘A moment of real possibility’ in Alzheimer’s care</a>
-<p class="abstract"><img src="https://news.harvard.edu/wp-content/uploads/2026/03/030526_AlzheimersNext_1184.jpg?w=1488" class="rss-image" />Experts explain how recent findings are demystifying disease that afflicts tens...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://news.harvard.edu/wp-content/uploads/2026/03/030526_AlzheimersNext_1184.jpg?w=1488" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Experts explain how recent findings are demystifying disease that afflicts tens...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://news.harvard.edu/gazette/story/2026/03/who-still-goes-to-the-movies/" class="paper-title" target="_blank" rel="noopener noreferrer">Who still goes to the movies?</a>
-<p class="abstract"><img src="https://news.harvard.edu/wp-content/uploads/2026/03/movies.png" class="rss-image" />For some, ease of streaming can’t beat thrill of watching films on the big screen...</p></li>
-</ul>
-
-<ul class="paper-list">
-<li><a href="https://news.harvard.edu/gazette/story/2026/03/thats-a-book/" class="paper-title" target="_blank" rel="noopener noreferrer">That’s a book?</a>
-<p class="abstract"><img src="https://news.harvard.edu/wp-content/uploads/2026/03/book_header.png" class="rss-image" />Faculty, staff offer recommendations for side trips off the beaten path...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://news.harvard.edu/wp-content/uploads/2026/03/movies.png" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>For some, ease of streaming can’t beat thrill of watching films on the big screen...</p></li>
 </ul>
 
 
@@ -774,17 +941,44 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 
 <ul class="paper-list">
 <li><a href="https://news.berkeley.edu/2026/03/06/the-diversity-principle-tracking-the-long-history-of-a-powerful-idea/" class="paper-title" target="_blank" rel="noopener noreferrer">‘The Diversity Principle’: Tracking the long history of a powerful idea</a>
-<p class="abstract"><img src="https://news.berkeley.edu/wp-content/uploads/2026/03/military_diversity_edit2-1024x585.jpg" class="rss-image" />In a new book, UC Berkeley legal scholar David B. Oppenheimer unearths the sur...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://news.berkeley.edu/wp-content/uploads/2026/03/military_diversity_edit2-1024x585.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>In a new book, UC Berkeley legal scholar David B. Oppenheimer unearths the sur...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://news.berkeley.edu/2026/03/06/nobel-laureate-omar-yaghi/" class="paper-title" target="_blank" rel="noopener noreferrer">Berkeley Talks: Nobel laureate Omar Yaghi on turning air into water for all</a>
-<p class="abstract"><img src="https://news.berkeley.edu/wp-content/uploads/2026/03/Omar-Yaghi-2500_Brittany-Hosea-Small-1024x585.jpg" class="rss-image" />The UC Berkeley chemist recounts his journey as a young immigrant ...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://news.berkeley.edu/wp-content/uploads/2026/03/Omar-Yaghi-2500_Brittany-Hosea-Small-1024x585.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>The UC Berkeley chemist recounts his journey as a young immigrant ...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://news.berkeley.edu/2026/03/06/sprawling-new-painting-commemorates-150-years-of-women-at-uc-berkeley/" class="paper-title" target="_blank" rel="noopener noreferrer">Sprawling new painting commemorates 150 years of women at UC Berkeley</a>
-<p class="abstract"><img src="https://news.berkeley.edu/wp-content/uploads/2026/03/150W_Mural_WebWPSizing-1024x576.png" class="rss-image" />The mural in the new Undergraduate Academic Building in the heart of campus pays...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://news.berkeley.edu/wp-content/uploads/2026/03/150W_Mural_WebWPSizing-1024x576.png" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>The mural in the new Undergraduate Academic Building in the heart of campus pays...</p></li>
 </ul>
 
 
@@ -792,17 +986,44 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 
 <ul class="paper-list">
 <li><a href="https://www.caltech.edu/about/news/measuring-local-well-being-from-space" class="paper-title" target="_blank" rel="noopener noreferrer">Measuring Local Well-Being from Space</a>
-<p class="abstract"><img src="https://caltech-prod.resources.caltech.edu/main/images/HDI-Analysis-Nairobi_Kenya_ES.2e16d0ba.fill-425x239-c100.jpg" class="rss-image" />Since 1990, the United Nations (UN) has used the Huma...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://caltech-prod.resources.caltech.edu/main/images/HDI-Analysis-Nairobi_Kenya_ES.2e16d0ba.fill-425x239-c100.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Since 1990, the United Nations (UN) has used the Huma...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.caltech.edu/about/news/gravitational-wave-observatories-release-new-catalog-of-detections" class="paper-title" target="_blank" rel="noopener noreferrer">Gravitational-wave observatories release new catalog of detections</a>
-<p class="abstract"><img src="https://caltech-prod.resources.caltech.edu/main/images/LIGO-Binary_Black_Hole_Merger.2e16d0ba.fill-425x239-c100.jpg" class="rss-image" />When the densest objects in the universe collide and ...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://caltech-prod.resources.caltech.edu/main/images/LIGO-Binary_Black_Hole_Merger.2e16d0ba.fill-425x239-c100.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>When the densest objects in the universe collide and ...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.caltech.edu/about/news/using-tiny-ripples-at-skin-level-to-monitor-for-possible-health-problems-below" class="paper-title" target="_blank" rel="noopener noreferrer">Using Tiny Ripples at Skin Level to Monitor for Possible Health Problems Below</a>
-<p class="abstract"><img src="https://caltech-prod.resources.caltech.edu/main/images/Bouman_Katie-Daraio_Chiara-Me.2e16d0ba.fill-425x239-c100.png" class="rss-image" />Caltech scientists have developed a method that detec...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://caltech-prod.resources.caltech.edu/main/images/Bouman_Katie-Daraio_Chiara-Me.2e16d0ba.fill-425x239-c100.png" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Caltech scientists have developed a method that detec...</p></li>
 </ul>
 
 
@@ -815,53 +1036,125 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 
 <ul class="paper-list">
 <li><a href="https://www.wsj.com/articles/wall-street-banks-prepare-to-sell-billions-of-dollars-of-x-loans-c609beb1?mod=pls_whats_news_us_business_f" class="paper-title" target="_blank" rel="noopener noreferrer">Wall Street Banks Prepare to Sell Billions of Dollars of X Loans</a>
-<p class="abstract"><img src="https://images.wsj.net/im-76791864/medium" class="rss-image" />Banks are hoping to sell the X debt at around 90 to 95 cents on the dollar....</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://images.wsj.net/im-76791864/medium" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Banks are hoping to sell the X debt at around 90 to 95 cents on the dollar....</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.wsj.com/articles/canada-to-provide-720-million-to-canada-post-to-avoid-insolvency-at-mail-service-fc09a6b9?mod=pls_whats_news_us_business_f" class="paper-title" target="_blank" rel="noopener noreferrer">Canada to Provide $720 Million to Canada Post to Avoid Insolvency at Mail Service</a>
-<p class="abstract"><img src="https://images.wsj.net/im-06909425/medium" class="rss-image" />The Canadian government said it would provide extraordinary financing to Canada Post to avoid insolvency at the state-owned mai...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://images.wsj.net/im-06909425/medium" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>The Canadian government said it would provide extraordinary financing to Canada Post to avoid insolvency at the state-owned mai...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.wsj.com/articles/amazon-willing-to-discuss-quebec-shutdown-with-canadian-officials-610e5f59?mod=pls_whats_news_us_business_f" class="paper-title" target="_blank" rel="noopener noreferrer">Amazon Willing to Discuss Quebec Shutdown With Canadian Officials</a>
-<p class="abstract"><img src="https://images.wsj.net/im-59141117/medium" class="rss-image" />Amazon.com said it is open to talks with officials from the Canadian and Quebec governments about the decision to shut down ope...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://images.wsj.net/im-59141117/medium" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Amazon.com said it is open to talks with officials from the Canadian and Quebec governments about the decision to shut down ope...</p></li>
 </ul>
 
 
 <h3>Financial Times</h3>
 
 <ul class="paper-list">
-<li><a href="https://www.ft.com/content/56dd339c-51ea-41b0-983a-fe13c0d5ab54" class="paper-title" target="_blank" rel="noopener noreferrer">French finance minister says ‘not there yet’ on releasing petroleum reserves</a>
-<p class="abstract"><img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fa5278bc5-d10c-4939-88fe-078ab54043dd.png?source=next-home-page&dpr=2&width...</p></li>
+<li><a href="https://www.ft.com/content/bc3179f5-5591-489e-8ff3-179c4d1242b1" class="paper-title" target="_blank" rel="noopener noreferrer">G7 ‘stands ready’ to release emergency oil reserves</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fecc8b424-f975-4d3d-935c-4eafbe33d2f5.jpg?source=next-home-page&dpr=2&width...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.ft.com/content/d2b243b8-0a36-4f48-b431-53101bea9699" class="paper-title" target="_blank" rel="noopener noreferrer">Iran war will leave a complex geoeconomic legacy</a>
-<p class="abstract"><img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc40081bf-c7ca-4896-b84c-b42639877fe5.jpg?source=next-home-page&dpr=2&width...</p></li>
+<li><a href=" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Iran war will leave a complex geoeconomic legacy</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fc40081bf-c7ca-4896-b84c-b42639877fe5.jpg?source=next-home-page&dpr=2&width...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.ft.com/content/9b08457e-6689-4f2d-8967-816c184e4fe2" class="paper-title" target="_blank" rel="noopener noreferrer">Gilt market slump deepens as traders bet on BoE rate rise</a>
-<p class="abstract"><img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F55f260ad-a332-4963-ae0e-c1c3e19c9d91.png?source=next-home-page&dpr=2&width...</p></li>
+<li><a href=" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Oil slips back below $100 a barrel</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Fe736d99d-2779-484f-bfc1-39c0b958bd4f.png?source=next-home-page&dpr=2&width...</p></li>
 </ul>
 
 
 <h3>Bloomberg</h3>
 
 <ul class="paper-list">
-<li><a href="https://www.bloomberg.com/news/audio/2026-03-09/nato-intercepts-2nd-missile-g-7-not-there-yet-on-oil-release" class="paper-title" target="_blank" rel="noopener noreferrer">NATO Intercepts 2nd Missile, G-7 'Not There Yet' on Oil Release</a>
+<li><a href=" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>NATO Intercepts Iranian Missile, G-7 'Stands Ready' on Oil, More</a>
 <p class="abstract">Source: Bloomberg, 0:00...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.bloomberg.com/news/audio/2026-03-09/stock-movers-chevron-delta-him-hers-podcast" class="paper-title" target="_blank" rel="noopener noreferrer">Stock Movers: Chevron, Delta, Him & Hers (Podcast)</a>
-<p class="abstract"><img src="http://assets.bwbx.io/images/iP.ogMkpzZrg/v2/1200x-1.jpg" class="rss-image" />Source: Bloomberg, 3:53...</p></li>
+<li><a href="https://www.bloomberg.com/news/audio/2026-03-09/stock-movers-hims-hers-live-nation-brown-forman-podcast" class="paper-title" target="_blank" rel="noopener noreferrer">Stock Movers: Hims & Hers, Live Nation, Brown-Forman (Podcast)</a>
+<p class="abstract"><div class="img-container">
+            <img src="http://assets.bwbx.io/images/iT1IJIOADO4A/v2/1200x-1.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Source: Bloomberg, 3:06...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.bloomberg.com/news/audio/2026-03-09/single-best-idea-palti-guzman-motevalli-podcast" class="paper-title" target="_blank" rel="noopener noreferrer">Single Best Idea: Palti-Guzman & Motevalli (Podcast)</a>
-<p class="abstract">Source: Bloomberg, 3:27...</p></li>
+<li><a href="https://www.bloomberg.com/news/articles/2026-03-09/inflation-expectations-steady-quits-at-record-low-in-fed-survey" class="paper-title" target="_blank" rel="noopener noreferrer">Inflation Expectations Steady, Quits at Record Low in Fed Survey</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iAdosBNS.1Sk/v1/1200x-1.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Americans’ inflation expectations remained mostly unchanged, while expectations about leavin...</p></li>
 </ul>
 
 
@@ -873,36 +1166,90 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 <h3>BBC News</h3>
 
 <ul class="paper-list">
-<li><a href="https://www.bbc.com/news/videos/cpv8342e3xvo?at_medium=RSS&at_campaign=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Watch: Why the Iran war is pushing up oil prices</a>
-<p class="abstract"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/d43c/live/0cb170c0-1bb2-11f1-801d-ed3cff6bf876.jpg" class="rss-image" />As turmoil continues in the Middle East, the price of crude oil ro...</p></li>
+<li><a href="https://www.bbc.com/news/articles/cvg548lyjnyo?at_medium=RSS&at_campaign=rss" class="paper-title" target="_blank" rel="noopener noreferrer">US missile hit military base near Iran school, video analysis shows</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/69d5/live/f15d3960-1bc2-11f1-b048-c9424b2cf5fd.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>A US Tomahawk missile hit a military base near a primary school in...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.bbc.com/news/articles/cz7g5vv2gejo?at_medium=RSS&at_campaign=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Faisal Islam: Oil price spiral may be slowed but not stopped by G7 emergency move</a>
-<p class="abstract"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/940e/live/19d40410-1bbd-11f1-964c-87b629a369ca.jpg" class="rss-image" />A big intervention is being discussed in the oil markets, but as y...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/940e/live/19d40410-1bbd-11f1-964c-87b629a369ca.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>A big intervention is being discussed in the oil markets, but as y...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.bbc.com/news/articles/cwy8e978xl8o?at_medium=RSS&at_campaign=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Five Iranian footballers 'in Australian safe house' after Asian Cup protest</a>
-<p class="abstract"><img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/56c3/live/bcb59ac0-1b83-11f1-adbd-33f1e217b4d9.jpg" class="rss-image" />Concern has grown for team after one critic called them 'wartime t...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/56c3/live/bcb59ac0-1b83-11f1-adbd-33f1e217b4d9.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Concern has grown for team after one critic called them 'wartime t...</p></li>
 </ul>
 
 
 <h3>The Guardian</h3>
 
 <ul class="paper-list">
-<li><a href="https://www.theguardian.com/food/2026/mar/09/peas-are-criminally-overlooked-seven-fabulous-forgotten-superfoods" class="paper-title" target="_blank" rel="noopener noreferrer">‘Peas are criminally overlooked!’ Seven fabulous forgotten superfoods</a>
-<p class="abstract"><img src="https://i.guim.co.uk/img/media/643889961313c8816efdecebabc5da9be9c65ed0/0_0_5000_4000/master/5000.jpg?width=140&quality=85&auto=format&fit=max&s=b3984dce97dedfb7cc4beea37ef73461" class="rss-...</p></li>
+<li><a href="https://www.theguardian.com/technology/2026/mar/09/from-press-release-to-scrap-metal-site-the-essex-supercomputer-thats-still-a-scaffolding-yard" class="paper-title" target="_blank" rel="noopener noreferrer">From press release … to scrap metal site: the Essex supercomputer that’s still a scaffolding yard</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://i.guim.co.uk/img/media/45d312c4e7dfd929c53972695558910b1b787e1b/517_0_4686_3751/master/4686.jpg?width=140&quality=85&auto=format&fit=max&s=c79edafc9a4d0820f333377d046dd1ae" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.theguardian.com/film/2026/mar/09/why-train-dreams-should-win-the-best-picture-oscar" class="paper-title" target="_blank" rel="noopener noreferrer">Why Train Dreams should win the best picture Oscar</a>
-<p class="abstract"><img src="https://i.guim.co.uk/img/media/adddbd9993ba9e75356296685750cd8ef3ba93d0/638_0_7723_6179/master/7723.jpg?width=140&quality=85&auto=format&fit=max&s=58c99bf5ed09181532e83246467b21e8" class="rs...</p></li>
+<li><a href="https://www.theguardian.com/global-development/2026/mar/09/interpol-dna-identifying-unknown-women-murder-victims-femicide" class="paper-title" target="_blank" rel="noopener noreferrer">‘We want to give them their names back’: the team identifying Europe’s forgotten female murder victims</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://i.guim.co.uk/img/media/321289be4fe5584e2da49b6d0c14e640a0cacd9d/79_457_1060_849/master/1060.jpg?width=140&quality=85&auto=format&fit=max&s=fc27054ba7324ed963bddfc0fb3f53ff" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.theguardian.com/commentisfree/2026/mar/09/kemi-badenoch-tories-rightwing-may-elections" class="paper-title" target="_blank" rel="noopener noreferrer">The Badenoch dilemma: what to do now the Tories are no longer the default rightwing option | Henry Hill</a>
-<p class="abstract"><img src="https://i.guim.co.uk/img/media/0662e6b70ad6be66f6fb153aceff0c2f7aa04676/412_0_4120_3296/master/4120.jpg?width=140&quality=85&auto=format&fit=max&s=0e166bbd947125dae449d40a84af98f2" class="rs...</p></li>
+<li><a href="https://www.theguardian.com/commentisfree/2026/mar/09/who-decides-news-diversity-black-journalists" class="paper-title" target="_blank" rel="noopener noreferrer">Who decides what’s news these days? For all the diversity talk, it certainly isn’t Black journalists | Omega Douglas</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://i.guim.co.uk/img/media/4466ab7932600e96243c6785027bf6d40de8b129/529_0_4752_3800/master/4752.jpg?width=140&quality=85&auto=format&fit=max&s=70339d0d54c95938ec422077bb127177" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div></li>
 </ul>
 
 
@@ -914,36 +1261,90 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 <h3>Le Monde</h3>
 
 <ul class="paper-list">
-<li><a href="https://www.lemonde.fr/international/live/2026/03/09/en-direct-guerre-au-moyen-orient-israel-annonce-des-attaques-a-grande-echelle-sur-l-iran-un-second-missile-iranien-detruit-par-l-otan-au-dessus-de-la-turquie_6669855_3210.html" class="paper-title" target="_blank" rel="noopener noreferrer">Guerre au Moyen-Orient : Emmanuel Macron annonce que la France va déployer dans la région « huit frégates, deux porte-hélicoptères amphibies et le porte-avions » « Charles-de-Gaulle »</a>
-<p class="abstract"><img src="https://img.lemde.fr/2026/03/09/246/0/5500/2750/644/322/60/0/f283474_ftp-1-soegdgy5a03v-2026-03-09t112406z-288674355-rc2z0ka9mair-rtrmadp-3-iran-crisis-cyprus-france.JPG" class="rss-image" /...</p></li>
+<li><a href="https://www.lemonde.fr/international/article/2026/03/09/ce-n-est-pas-notre-guerre-des-libanais-en-colere-contre-le-hezbollah_6670109_3210.html" class="paper-title" target="_blank" rel="noopener noreferrer">« Ce n’est pas notre guerre » : des Libanais en colère contre le Hezbollah</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://img.lemde.fr/2026/03/07/912/0/7280/3640/644/322/60/0/c841e65_upload-1-jjs7ildwtnk2-raf-liban-07-03-26-015.JPG" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Déplacés par les bombardements israéliens, du sud d...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.lemonde.fr/idees/article/2026/03/09/yann-algan-economiste-dans-l-entreprise-le-salarie-qui-vote-rn-se-sent-seul-et-se-defie-davantage-de-ses-collegues_6670052_3232.html" class="paper-title" target="_blank" rel="noopener noreferrer">Yann Algan, économiste : « Il y a quelques années, nous pensions que le vote RN était celui des classes malheureuses. Ce n’est plus le cas »</a>
-<p class="abstract"><img src="https://img.lemde.fr/2026/03/05/1072/282/3040/1520/644/322/60/0/413a3da_upload-1-bzptowyedos2-yann-algan.jpg" class="rss-image" />Une étude, qui paraît lundi, montre que la frustration et la...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://img.lemde.fr/2026/03/05/1072/282/3040/1520/644/322/60/0/413a3da_upload-1-bzptowyedos2-yann-algan.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Une étude, qui paraît lundi, montre que la frustration et la...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.lemonde.fr/societe/article/2026/03/09/bygmalion-le-tribunal-decide-que-nicolas-sarkozy-doit-purger-sa-peine-ferme_6670115_3224.html" class="paper-title" target="_blank" rel="noopener noreferrer">Bygmalion : le tribunal décide que Nicolas Sarkozy doit purger sa peine ferme</a>
-<p class="abstract"><img src="https://img.lemde.fr/2026/03/09/85/0/3000/1500/644/322/60/0/dce7aa1_upload-1-h6rkazvdjcz2-000-94cq79z.jpg" class="rss-image" />L’ancien chef de l’Etat avait demandé la confusion de ses peine...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://img.lemde.fr/2026/03/09/85/0/3000/1500/644/322/60/0/dce7aa1_upload-1-h6rkazvdjcz2-000-94cq79z.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>L’ancien chef de l’Etat avait demandé la confusion de ses peine...</p></li>
 </ul>
 
 
 <h3>France 24</h3>
 
 <ul class="paper-list">
-<li><a href="https://www.france24.com/en/middle-east/20260309-khamenei-replaces-khamenei-iran-defies-trump-signals-continuity" class="paper-title" target="_blank" rel="noopener noreferrer">Khamenei replaces Khamenei: Iran defies Trump, signals continuity</a>
-<p class="abstract"><img src="https://s.france24.com/media/display/7b9fcd72-1bbe-11f1-9976-005056a90284/w:1024/p:16x9/000-A2HJ7GL.jpg" class="rss-image" />Iran’s choice of Mojtaba Khamenei to replace his slain father, Al...</p></li>
+<li><a href="https://www.france24.com/en/tv-shows/down-to-earth/20260309-tehran-shrouded-in-toxic-cloud-after-us-israeli-strikes-on-oil-deposits" class="paper-title" target="_blank" rel="noopener noreferrer">Tehran shrouded in toxic cloud after US-Israeli strikes on oil deposits</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://s.france24.com/media/display/7763310a-1bcc-11f1-ae0f-005056bfb2b6/w:1024/p:16x9/202603082023WD-IRAN-CRISISTEHRAN-OIL-REFINERY-AFTERMAT-O.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Huge fires broke out...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.france24.com/en/us-and-gulf-states-turn-to-ukraine-to-counter-iranian-drone-attacks" class="paper-title" target="_blank" rel="noopener noreferrer">US and Gulf states turn to Ukraine to counter Iranian drone attacks</a>
-<p class="abstract"><img src="https://s.france24.com/media/display/d2c297e4-1bc6-11f1-8a25-005056a97e36/w:1024/p:16x9/capture-30033739869aedd6162e780-84657882.jpg" class="rss-image" />The supply of weaponry and drone int...</p></li>
+<li><a href="https://www.france24.com/en/jailed-istanbul-mayor-goes-on-trial-in-corruption-case-slammed-as-political" class="paper-title" target="_blank" rel="noopener noreferrer">Jailed Istanbul mayor goes on trial in corruption case slammed as political</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://s.france24.com/media/display/1956632e-1bcd-11f1-9566-005056a90284/w:1024/p:16x9/EN-20260309-161940-162129-CS.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Istanbul's former mayor Ekrem Imamoglu has gone ...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.france24.com/en/tv-shows/perspective/20260309-children-in-lebanon-paying-the-highest-price-amid-conflict-in-middle-east-unicef" class="paper-title" target="_blank" rel="noopener noreferrer">Children in Lebanon 'paying the highest price' amid conflict in Middle East: UNICEF</a>
-<p class="abstract"><img src="https://s.france24.com/media/display/550e8f36-1bbe-11f1-a964-005056bfb2b6/w:1024/p:16x9/EN-20260309-093712-094456-CS.jpg" class="rss-image" />One week after hostilities resumed between Israe...</p></li>
+<li><a href="https://www.france24.com/en/what-will-iran-s-new-ayatollah-mojtaba-khamenei-be-in-charge-of" class="paper-title" target="_blank" rel="noopener noreferrer">What will Iran's new Ayatollah Mojtaba Khamenei be in charge of?</a>
+<p class="abstract"><div class="img-container">
+            <img src="https://s.france24.com/media/display/f0548e26-1b70-11f1-92f2-005056bf30b7/w:1024/p:16x9/000-A2FW8NQ.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Mojtaba Khamenei, son of late Ayatollah Ali Khamenei, has become ...</p></li>
 </ul>
 
 
@@ -956,17 +1357,44 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 
 <ul class="paper-list">
 <li><a href="https://www.spiegel.de/international/zeitgeist/reckless-suicidal-race-the-deadly-threat-posed-by-artificial-intelligence-a-8d17183a-90d8-4660-a1bb-d1f1ce560cae#ref=rss" class="paper-title" target="_blank" rel="noopener noreferrer">"Reckless, Suicidal Race": The Deadly Threat Posed by Artificial Intelligence</a>
-<p class="abstract"><img src="https://cdn.prod.www.spiegel.de/images/6ee93e0e-4541-4fb7-9296-a63f29289ae8_w520_r2.08_fpx50_fpy46.jpg" class="rss-image" />The rapid rise of artificial intelligence is just as dangerous as ...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://cdn.prod.www.spiegel.de/images/6ee93e0e-4541-4fb7-9296-a63f29289ae8_w520_r2.08_fpx50_fpy46.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>The rapid rise of artificial intelligence is just as dangerous as ...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.spiegel.de/international/europe/portrait-of-a-city-after-four-years-of-war-the-courage-of-kyiv-a-4799038a-63eb-44e3-9177-73704fd85106#ref=rss" class="paper-title" target="_blank" rel="noopener noreferrer">Portrait of a City after Four Years of War: The Courage of Kyiv</a>
-<p class="abstract"><img src="https://cdn.prod.www.spiegel.de/images/200a6a54-bc72-4f71-b215-15753be22e64_w520_r2.08_fpx65.33_fpy49.99.jpg" class="rss-image" />The attacks come at night. But once the sun comes up, daily ...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://cdn.prod.www.spiegel.de/images/200a6a54-bc72-4f71-b215-15753be22e64_w520_r2.08_fpx65.33_fpy49.99.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>The attacks come at night. But once the sun comes up, daily ...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.spiegel.de/international/world/u-s-historian-robert-kagan-we-are-watching-a-country-fall-under-dictatorship-almost-without-resistance-a-d262290b-cca0-4c2f-945d-2ef3b64c574f#ref=rss" class="paper-title" target="_blank" rel="noopener noreferrer">U.S. Historian Robert Kagan: "We Are Watching a Country Fall Under Dictatorship Almost Without Resistance"</a>
-<p class="abstract"><img src="https://cdn.prod.www.spiegel.de/images/755c7117-1d1f-4294-bfcb-8694ad3ddfe4_w520_r2.08_fpx64.65_fpy44.96.jpg" class="rss-image" />The Cold War? Child's play compared to what lies ahead, acco...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://cdn.prod.www.spiegel.de/images/755c7117-1d1f-4294-bfcb-8694ad3ddfe4_w520_r2.08_fpx64.65_fpy44.96.jpg" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>The Cold War? Child's play compared to what lies ahead, acco...</p></li>
 </ul>
 
 
@@ -974,41 +1402,68 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
 
 <ul class="paper-list">
 <li><a href="https://www.faz.net/aktuell/wirtschaft/cdu-spd-fdp-nach-der-wahl-in-baden-wuerttemberg-das-leiden-der-veteranen-110850329.html" class="paper-title" target="_blank" rel="noopener noreferrer">Bundesregierung nach der Wahl: Das Leiden der Veteranen</a>
-<p class="abstract"><img src="https://media0.faz.net/image/db6e04c54a53/w4544h2556x0y194/202512/43601.0.1571143434/so-sehen-keine-sieger-aus.webp" class="rss-image" />Die Altparteien trauen sich viel zu wenig – und wunde...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://media0.faz.net/image/db6e04c54a53/w4544h2556x0y194/202512/43601.0.1571143434/so-sehen-keine-sieger-aus.webp" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Die Altparteien trauen sich viel zu wenig – und wunde...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.faz.net/aktuell/politik/wahl-in-baden-wuerttemberg/liveblog-zur-landtagswahl-baden-wuerttemberg-2026-gruene-lehnen-teilung-der-amtszeit-ab-faz-200593533.html" class="paper-title" target="_blank" rel="noopener noreferrer">Wahl in Baden-Württemberg: Grüne lehnen Teilung der Amtszeit ab</a>
-<p class="abstract"><img src="https://media0.faz.net/image/82f5325299f0/w7081h3983x0y137/202603/43601.0.1862714095/cem-oezdemir-spricht-am-montag.webp" class="rss-image" />Spahn will Özdemir nur halbe Amtszeit als Minist...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://media0.faz.net/image/82f5325299f0/w7081h3983x0y137/202603/43601.0.1862714095/cem-oezdemir-spricht-am-montag.webp" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Spahn will Özdemir nur halbe Amtszeit als Minist...</p></li>
 </ul>
 
 <ul class="paper-list">
 <li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/landtagswahl-bw-2026-das-sagt-fdp-vize-kubicki-ueber-den-schock-im-stammland-accg-200614242.html" class="paper-title" target="_blank" rel="noopener noreferrer">Kubicki über FDP-Debakel: „Es sind schon so viele Sargnägel in den Sarg der FDP reingeklopft worden“</a>
-<p class="abstract"><img src="https://media0.faz.net/image/f9d95b476328/w6000h3375x0y247/202602/43601.0.1793046150/wolfgang-kubicki-ist.webp" class="rss-image" />Nach der Wahlniederlage in Baden-Württemberg suchen die Li...</p></li>
+<p class="abstract"><div class="img-container">
+            <img src="https://media0.faz.net/image/f9d95b476328/w6000h3375x0y247/202602/43601.0.1793046150/wolfgang-kubicki-ist.webp" 
+                 alt="" 
+                 class="content-img" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer"
+                 onerror="this.style.display='none'; this.parentElement.classList.add('img-error');"
+                 onload="this.parentElement.classList.add('img-loaded');">
+            <div class="img-placeholder">📷</div>
+        </div>Nach der Wahlniederlage in Baden-Württemberg suchen die Li...</p></li>
 </ul>
 
 
 <h3>Deutsche Welle</h3>
 
 <ul class="paper-list">
-<li><a href="https://www.dw.com/en/why-kenya-s-massive-state-house-budget-raises-eyebrows/a-76274407?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Why Kenya's 'massive' State House budget raises eyebrows</a>
-<p class="abstract">New budget allocation for Kenya's State House shows it has surpassed that of many other countries. While there's a caveat to the increase, economists urge stronger accountability and prioritization....</p></li>
+<li><a href="https://www.dw.com/en/fact-check-netanyahu-theories-spread-online/a-76277637?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Fact check: Netanyahu theories spread online</a>
+<p class="abstract">Amid the ongoing conflict in the Middle East, social media discussions have recently centered on the whereabouts of Israeli Prime Minister Benjamin Netanyahu and his family. DW Fact Check looks behind...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.dw.com/en/turkey-heated-trial-of-istanbul-mayor-imamoglu-opens/a-76276717?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Turkey: Heated trial of Istanbul Mayor Imamoglu opens</a>
-<p class="abstract">The contentious trial of Istanbul's deposed mayor, once the main rival to President Erdogan, got off to a rocky start. The opposition CHP party calls the corruption investigation against it politicall...</p></li>
+<li><a href="https://www.dw.com/en/fears-grow-for-iran-s-women-s-football-team/a-76278906?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Fears grow for Iran's women's football team</a>
+<p class="abstract">Calls are growing for Australia to offer asylum to the Iranian national team at the Asian Cup. With serious punishment looming, five players have reportedly escaped Iran's supervision amid safety conc...</p></li>
 </ul>
 
 <ul class="paper-list">
-<li><a href="https://www.dw.com/en/huge-blaze-near-glasgow-central-station-causes-travel-chaos/a-76277990?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Huge blaze near Glasgow central station causes travel chaos</a>
-<p class="abstract">A fire that began on Sunday near Glasgow Central Station has crippled train services at the busy rail hub. Major travel disruptions are expected to last throughout Monday....</p></li>
+<li><a href="https://www.dw.com/en/iran-war-how-long-before-gulf-nations-stop-pumping-oil/a-76272635?maca=en-rss-en-all-1573-rdf" class="paper-title" target="_blank" rel="noopener noreferrer">Iran war: How long before Gulf nations stop pumping oil?</a>
+<p class="abstract">The oil price spiked near $120 after strikes on Iran's energy sites and the shutdown of the Strait of Hormuz. With tankers stuck and Gulf oil facilities hit, producers are running short on storage to ...</p></li>
 </ul>
 
 
 <hr>
 
-<em>报告生成时间: 2026-03-09 22:53</em>  
+<em>报告生成时间: 2026-03-09 23:41</em>  
 <em>共收录 51 个 RSS 源</em>
 
         </div>
@@ -1025,14 +1480,12 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
         var isWeixin = /MicroMessenger/i.test(navigator.userAgent);
         
         if (isWeixin) {
-            // 微信环境下强制刷新分享数据
             document.addEventListener('WeixinJSBridgeReady', function() {
                 WeixinJSBridge.call('hideOptionMenu');
                 WeixinJSBridge.call('showOptionMenu');
             });
         }
         
-        // 通用分享数据更新
         var shareData = {
             title: '📚 全球学术与媒体日报',
             desc: '每日自动抓取 arXiv、Nature、Science 及全球主流媒体，生成学术与新闻综合报告',
@@ -1042,7 +1495,6 @@ The post Simbe Tally shelf-scanning robot achieves UL 3300 certification appeare
             cancel: function() {}
         };
         
-        // 监听分享事件
         if (typeof wx !== 'undefined') {
             wx.ready(function() {
                 wx.onMenuShareTimeline(shareData);
