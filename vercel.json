@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "rss-colorfulins",
+  "public": true,
+  "github": {
+    "enabled": true
+  }
+}
